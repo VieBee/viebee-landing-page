@@ -295,7 +295,7 @@ function Index() {
           src={bee.url}
           alt=""
           style={{ x: bx, y: by }}
-          className="pointer-events-none absolute left-1/2 top-1/2 z-20 hidden w-64 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply md:block"
+          className="pointer-events-none absolute right-[4%] top-[12%] z-20 hidden w-72 mix-blend-multiply md:block"
         />
 
         <div className="relative z-10 text-center">
