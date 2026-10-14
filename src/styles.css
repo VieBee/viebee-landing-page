@@ -132,13 +132,35 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+:root {
+  --background: oklch(0.987 0.02 87);
+  --foreground: oklch(0 0 0);
+  --card: oklch(1 0 0);
+  --primary: oklch(0.42 0.23 266);
+  --primary-foreground: oklch(1 0 0);
+  --muted-foreground: oklch(0.45 0.01 260);
+  --border: oklch(0.92 0.01 260);
+  --shadow-soft: 0 20px 40px -20px color-mix(in oklab, var(--primary) 25%, transparent);
+}
+
+@theme inline {
+  --font-sans: "Poppins", sans-serif;
+  --shadow-soft: var(--shadow-soft);
+  --animate-float: float 6s ease-in-out infinite;
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
   }
-
+  html { scroll-behavior: smooth; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
 }
