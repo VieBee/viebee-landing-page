@@ -75,7 +75,7 @@ function Index() {
     return () => window.removeEventListener("scroll", on);
   }, []);
 
-  const icons = [Map, Languages, Smartphone];
+  const icons = [Map, Languages, Smartphone] as const;
   const floaters = [
     { I: Plane, cls: "left-[10%] top-[22%]", d: "0s" },
     { I: Compass, cls: "right-[12%] top-[28%]", d: "1.5s" },
@@ -186,7 +186,7 @@ function Index() {
       <section id="features" className="bg-background px-6 py-28">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
           {c.f.map(([title, sub], i) => {
-            const I = icons[i];
+            const I = icons[i] ?? Map;
             return (
               <Reveal key={i} delay={i * 0.12}>
                 <div className="rounded-3xl bg-card p-8 transition duration-300 hover:-translate-y-2 hover:shadow-soft">
