@@ -295,7 +295,7 @@ function Index() {
           src={bee.url}
           alt=""
           style={{ x: bx, y: by }}
-          className="pointer-events-none absolute right-[4%] top-[12%] z-20 hidden w-72 mix-blend-multiply md:block"
+          className="pointer-events-none absolute right-[-2%] top-[2%] z-20 hidden w-[30rem] mix-blend-multiply md:block"
         />
 
         <div className="relative z-10 text-center">
@@ -304,7 +304,7 @@ function Index() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex -rotate-2 items-center gap-2 rounded-full border-2 border-ink bg-honey px-4 py-1 text-xs font-semibold text-ink shadow-pop"
           >
-            🐝 {c.badge}
+            {c.badge}
           </motion.span>
           <AnimatePresence mode="wait">
             <motion.h1
