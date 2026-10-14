@@ -11,16 +11,17 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { Map, Languages, Smartphone, Play, ShieldCheck, MapPin, CalendarCheck, Sparkles, ArrowRight } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
-import bee from "@/assets/bee.png.asset.json";
 import { BrushHighlight, BrushUnderline, BrushCircle } from "@/components/Brush";
+
+const logoSrc = "/viebee-light-bg-yellow.png";
+const beeSrc = "/viebee-bee.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VieBee — Experience local. Truly." },
+      { title: "VieBee - Experience local. Truly." },
       { name: "description", content: "Discover Vietnam beyond the guidebooks through the people who live it. Book micro-workshops with verified local hosts." },
-      { property: "og:title", content: "VieBee — Experience local. Truly." },
+      { property: "og:title", content: "VieBee - Experience local. Truly." },
       { property: "og:description", content: "Discover Vietnam beyond the guidebooks through the people who live it." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -38,7 +39,7 @@ const t = {
     h1a: "Experience",
     h1b: "local.",
     h1c: "Truly.",
-    sub: "Discover Vietnam beyond the guidebooks — through the people who live it.",
+    sub: "Discover Vietnam beyond the guidebooks through the people who live it.",
     cta: "See How It Works",
     cta2: "Become a host",
     marquee: ["Phở cooking", "Silk weaving", "Bát Tràng pottery", "Bamboo crafting", "Áo dài tailoring", "Embroidery", "Coffee farming", "Street food walks"],
@@ -58,7 +59,7 @@ const t = {
     ],
     hostKicker: "For hosts",
     hostTitle: ["Your craft is", "worth sharing."],
-    hostSub: "Home cooks, weavers, potters, tailors, farmers — earn from what you already know.",
+    hostSub: "Home cooks, weavers, potters, tailors, farmers - earn from what you already know.",
     hostList: ["Create a workshop", "Set slots & capacity", "Manage RSVPs", "Get paid"],
     whyTitle: ["Vietnam is", "buzzing"],
     stats: [
@@ -77,7 +78,7 @@ const t = {
     h1a: "Trải nghiệm",
     h1b: "bản địa.",
     h1c: "Đích thực.",
-    sub: "Khám phá Việt Nam vượt xa sách hướng dẫn — qua chính những người đang sống ở đó.",
+    sub: "Khám phá Việt Nam vượt xa những cuốn cẩm nang du lịch qua chính những người đang sống ở đó.",
     cta: "Xem cách hoạt động",
     cta2: "Trở thành chủ nhà",
     marquee: ["Nấu phở", "Dệt lụa", "Gốm Bát Tràng", "Đan tre", "May áo dài", "Thêu tay", "Trồng cà phê", "Ẩm thực đường phố"],
@@ -97,7 +98,7 @@ const t = {
     ],
     hostKicker: "Cho chủ nhà",
     hostTitle: ["Tay nghề của bạn", "đáng được chia sẻ."],
-    hostSub: "Đầu bếp tại gia, thợ dệt, thợ gốm, thợ may, nông dân — kiếm thu nhập từ điều bạn đã biết.",
+    hostSub: "Đầu bếp tại gia, thợ dệt, thợ gốm, thợ may, nông dân - kiếm thu nhập từ điều bạn đã biết.",
     hostList: ["Tạo workshop", "Đặt giờ & số chỗ", "Quản lý đặt chỗ", "Nhận thanh toán"],
     whyTitle: ["Việt Nam đang", "rộn ràng"],
     stats: [
@@ -240,7 +241,7 @@ function Index() {
           }`}
         >
           <a href="#top" className="flex items-center gap-1.5">
-            <img src={logo.url} alt="VieBee" className={`mix-blend-multiply transition-all ${scrolled ? "h-8 w-8" : "h-10 w-10"}`} />
+            <img src={logoSrc} alt="VieBee" className={`mix-blend-multiply transition-all ${scrolled ? "h-8 w-8" : "h-10 w-10"}`} />
             <span className={`font-bold text-primary transition-all ${scrolled ? "text-lg" : "text-xl"}`}>VieBee</span>
           </a>
           <div className="hidden items-center gap-0.5 md:flex">
@@ -292,7 +293,7 @@ function Index() {
         <div className="pointer-events-none absolute bottom-[14%] left-[14%] h-16 w-16 rounded-full border-[6px] border-dashed border-primary/30 animate-[spin_20s_linear_infinite]" />
 
         <motion.img
-          src={bee.url}
+          src={beeSrc}
           alt=""
           style={{ x: bx, y: by }}
           className="pointer-events-none absolute right-[-2%] top-[2%] z-20 hidden w-[30rem] mix-blend-multiply md:block"
@@ -393,7 +394,7 @@ function Index() {
             className="group relative flex aspect-video cursor-pointer items-center justify-center overflow-hidden rounded-3xl border-2 border-ink bg-background shadow-pop"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,var(--honey-soft),transparent_60%)]" />
-            <img src={bee.url} alt="" className="absolute right-8 top-6 w-40 mix-blend-multiply animate-wiggle" />
+            <img src={beeSrc} alt="" className="absolute right-8 top-6 w-40 mix-blend-multiply animate-wiggle" />
             <span className="absolute inset-0 m-auto h-24 w-24 animate-ping rounded-full bg-primary/20" />
             <button
               aria-label="Play video"
@@ -438,7 +439,7 @@ function Index() {
       <section id="hosts" className="bg-ink px-6 py-28 text-background">
         <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-2">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-honey">{c.hostKicker}</p>
+            <p className="text-lg font-semibold text-honey">{c.hostKicker}</p>
             <h2 className="mt-4 text-4xl font-bold leading-tight md:text-6xl">
               {c.hostTitle[0]} <span className="text-honey">{c.hostTitle[1]}</span>
             </h2>
@@ -483,7 +484,7 @@ function Index() {
 
       {/* JOIN */}
       <section id="join" className="relative overflow-hidden bg-honey px-6 py-28">
-        <img src={bee.url} alt="" className="absolute -left-10 top-6 w-56 mix-blend-multiply animate-wiggle" />
+        <img src={beeSrc} alt="" className="absolute -left-10 top-6 w-56 mix-blend-multiply animate-wiggle" />
         <div className="relative mx-auto max-w-2xl text-center">
           <Reveal>
             <h2 className="text-4xl font-bold leading-tight text-ink md:text-6xl">
@@ -529,7 +530,7 @@ function Index() {
       </section>
 
       <footer className="flex items-center justify-center gap-2 bg-card py-10 text-sm text-muted-foreground">
-        <img src={logo.url} alt="" className="h-6 w-6 mix-blend-multiply" />© VieBee Official
+        <img src={logoSrc} alt="" className="h-6 w-6 mix-blend-multiply" />© VieBee Official
       </footer>
     </div>
   );

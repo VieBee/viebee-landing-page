@@ -177,10 +177,17 @@
   * {
     border-color: var(--color-border);
   }
-  html { scroll-behavior: smooth; }
+  html { 
+    scroll-behavior: smooth;
+    cursor: url('/viebee-bee-32.png') 0 14, url('/viebee-bee.png') 0 14, auto;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    cursor: url('/viebee-bee-32.png') 0 14, url('/viebee-bee.png') 0 14, auto;
+  }
+  a, button, [role="button"], input, select, textarea {
+    cursor: url('/viebee-bee-32.png') 0 14, url('/viebee-bee.png') 0 14, pointer;
   }
 }
