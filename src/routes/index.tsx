@@ -217,7 +217,7 @@ function Index() {
         <button
           key={l}
           onClick={() => setLang(l)}
-          className={`relative z-10 w-9 py-1 uppercase transition-colors ${lang === l ? "text-background" : "text-muted-foreground"}`}
+          className={`relative z-10 w-9 py-1 transition-colors ${lang === l ? "text-background" : "text-muted-foreground"}`}
         >
           {l}
         </button>
@@ -384,7 +384,7 @@ function Index() {
       <section className="bg-primary px-6 py-28">
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.3em] text-primary-foreground/70">
+            <p className="mb-8 text-center text-2xl font-semibold text-primary-foreground/70">
               {c.action}
             </p>
           </Reveal>
