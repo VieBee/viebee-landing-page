@@ -10,7 +10,7 @@ import {
   animate,
   AnimatePresence,
 } from "framer-motion";
-import { Map, Languages, Smartphone, Play, ShieldCheck, MapPin, CalendarCheck, Sparkles, ArrowRight } from "lucide-react";
+import { Map, Languages, Smartphone, Play, ShieldCheck, MapPin, CalendarCheck, Sparkles, ArrowRight, Mail, Copy, Check } from "lucide-react";
 import { BrushHighlight, BrushUnderline, BrushCircle } from "@/components/Brush";
 
 const logoSrc = "/viebee-light-bg-yellow.png";
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
 type Lang = "en" | "vi";
 const t = {
   en: {
-    nav: ["How it works", "Features", "Hosts", "Why now"],
+    nav: ["Features", "Hosts", "Why now"],
     join: "Join Waitlist",
     badge: "Peer-to-peer cultural travel",
     h1a: "Experience",
@@ -72,7 +72,7 @@ const t = {
     thanks: "You're on the list! 🐝",
   },
   vi: {
-    nav: ["Cách hoạt động", "Tính năng", "Chủ nhà", "Vì sao"],
+    nav: ["Cách hoạt động", "Tính năng", "Hosts", "Vì sao"],
     join: "Tham gia ngay",
     badge: "Du lịch văn hoá ngang hàng",
     h1a: "Trải nghiệm",
@@ -80,7 +80,7 @@ const t = {
     h1c: "Đích thực.",
     sub: "Khám phá Việt Nam vượt xa những cuốn cẩm nang du lịch qua chính những người đang sống ở đó.",
     cta: "Xem cách hoạt động",
-    cta2: "Trở thành chủ nhà",
+    cta2: "Trở thành Host",
     marquee: ["Nấu phở", "Dệt lụa", "Gốm Bát Tràng", "Đan tre", "May áo dài", "Thêu tay", "Trồng cà phê", "Ẩm thực đường phố"],
     howTitle: ["Ba chạm đến", "văn hoá thật"],
     how: [
@@ -94,9 +94,9 @@ const t = {
       ["Bản đồ văn hoá", "Những viên ngọc ẩn, trên bản đồ."],
       ["AI Copilot", "Dịch thời gian thực + bối cảnh văn hoá."],
       ["Đón khách dễ dàng", "Tạo workshop trong vài phút."],
-      ["Đã xác minh", "Chủ nhà được cộng đồng kiểm chứng."],
+      ["Đã xác minh", "Hosts được cộng đồng kiểm chứng."],
     ],
-    hostKicker: "Cho chủ nhà",
+    hostKicker: "Cho Host",
     hostTitle: ["Tay nghề của bạn", "đáng được chia sẻ."],
     hostSub: "Đầu bếp tại gia, thợ dệt, thợ gốm, thợ may, nông dân - kiếm thu nhập từ điều bạn đã biết.",
     hostList: ["Tạo workshop", "Đặt giờ & số chỗ", "Quản lý đặt chỗ", "Nhận thanh toán"],
@@ -173,6 +173,8 @@ function Index() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const [joined, setJoined] = useState(false);
+  const [email, setEmail] = useState("");
+  const [copiedEmail, setCopiedEmail] = useState(false);
   const c = t[lang];
 
   const videoRef = useRef<HTMLDivElement>(null);
@@ -326,7 +328,7 @@ function Index() {
           <p className="mx-auto mt-8 max-w-md text-lg font-light text-muted-foreground">{c.sub}</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="#how"
+              href="#features"
               className="group inline-flex items-center gap-2 rounded-2xl border-2 border-ink bg-primary px-7 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 hover:translate-x-[-2px]"
             >
               {c.cta} <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
@@ -353,7 +355,7 @@ function Index() {
       </div>
 
       {/* HOW IT WORKS */}
-      <section id="how" className="bg-background px-6 py-28">
+      {/* <section id="how" className="bg-background px-6 py-28">
         <div className="mx-auto max-w-5xl">
           <Reveal>
             <h2 className="text-center text-4xl font-bold tracking-tight text-foreground md:text-6xl">
@@ -378,10 +380,10 @@ function Index() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* VIDEO */}
-      <section className="bg-primary px-6 py-28">
+      {/* <section className="bg-primary px-6 py-28">
         <div className="mx-auto max-w-5xl">
           <Reveal>
             <p className="mb-8 text-center text-2xl font-semibold text-primary-foreground/70">
@@ -404,7 +406,7 @@ function Index() {
             </button>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* FEATURES (bento) */}
       <section id="features" className="bg-sky px-6 py-28">
@@ -509,6 +511,16 @@ function Index() {
                   exit={{ opacity: 0, y: -10 }}
                   onSubmit={(e) => {
                     e.preventDefault();
+                    // shortcut: mailto opens user's mail client directly, upgrade to server-side API when backend is added
+                    const isVi = lang === "vi";
+                    const subject = isVi
+                      ? "[VieBee Waitlist] Đăng ký trải nghiệm sớm"
+                      : "[VieBee Waitlist] Early Access Registration";
+                    const body = isVi
+                      ? `Kính gửi Đội ngũ VieBee,\r\n\r\nTôi muốn đăng ký tham gia danh sách chờ trải nghiệm sớm nền tảng du lịch văn hoá bản địa VieBee.\r\n\r\nThông tin liên hệ của tôi:\r\n- Họ và tên: [Vui lòng điền họ và tên]\r\n- Số điện thoại: [Vui lòng điền số điện thoại]\r\n- Email: ${email.trim()}\r\n\r\nRất mong sớm nhận được thông tin từ VieBee!\r\n\r\nTrân trọng,`
+                      : `Dear VieBee Team,\r\n\r\nI would like to join the early access waitlist for VieBee to discover authentic local workshops in Vietnam.\r\n\r\nHere are my contact details:\r\n- Full Name: [Please enter your full name]\r\n- Phone Number: [Please enter your phone number]\r\n- Email: ${email.trim()}\r\n\r\nLooking forward to hearing from you!\r\n\r\nBest regards,`;
+
+                    window.location.href = `mailto:viebee.contact@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                     setJoined(true);
                   }}
                   className="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:flex-row"
@@ -516,10 +528,15 @@ function Index() {
                   <input
                     type="email"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder={c.email}
                     className="flex-1 rounded-2xl border-2 border-ink bg-card px-5 py-4 text-ink outline-none focus:shadow-pop"
                   />
-                  <button className="rounded-2xl border-2 border-ink bg-primary px-6 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1">
+                  <button
+                    type="submit"
+                    className="rounded-2xl border-2 border-ink bg-primary px-6 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1"
+                  >
                     {c.join}
                   </button>
                 </motion.form>
@@ -529,8 +546,35 @@ function Index() {
         </div>
       </section>
 
-      <footer className="flex items-center justify-center gap-2 bg-card py-10 text-sm text-muted-foreground">
-        <img src={logoSrc} alt="" className="h-6 w-6 mix-blend-multiply" />© VieBee Official
+      <footer className="flex flex-col items-center justify-center gap-4 bg-card py-10 text-sm text-muted-foreground sm:flex-row sm:gap-6">
+        <div className="flex items-center gap-2">
+          <img src={logoSrc} alt="" className="h-6 w-6 mix-blend-multiply" />
+          <span>© VieBee Official</span>
+        </div>
+        <span className="hidden text-ink/20 sm:inline">•</span>
+        <button
+          type="button"
+          onClick={() => {
+            navigator.clipboard.writeText("viebee.contact@gmail.com");
+            setCopiedEmail(true);
+            setTimeout(() => setCopiedEmail(false), 2000);
+          }}
+          title={copiedEmail ? "Copied!" : "Click to copy email"}
+          className="group relative inline-flex items-center gap-2 rounded-full border-2 border-ink/15 bg-background px-3.5 py-1.5 text-xs font-medium text-foreground transition hover:-translate-y-0.5 hover:border-ink hover:shadow-pop"
+        >
+          <Mail className="h-3.5 w-3.5 text-primary" />
+          <span>viebee.contact@gmail.com</span>
+          {copiedEmail ? (
+            <Check className="h-3.5 w-3.5 text-emerald-600" />
+          ) : (
+            <Copy className="h-3.5 w-3.5 text-muted-foreground transition group-hover:text-foreground" />
+          )}
+          {copiedEmail && (
+            <span className="absolute -top-8 left-1/2 -translate-x-1/2 rounded-md border border-ink bg-ink px-2 py-0.5 text-[10px] font-semibold text-background shadow-soft">
+              Copied!
+            </span>
+          )}
+        </button>
       </footer>
     </div>
   );
