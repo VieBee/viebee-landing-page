@@ -72,7 +72,7 @@ const t = {
     thanks: "You're on the list! 🐝",
   },
   vi: {
-    nav: ["Cách hoạt động", "Tính năng", "Hosts", "Vì sao"],
+    nav: ["Tính năng", "Hosts", "Vì sao"],
     join: "Tham gia ngay",
     badge: "Du lịch văn hoá ngang hàng",
     h1a: "Trải nghiệm",
