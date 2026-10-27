@@ -174,6 +174,7 @@ function Index() {
   const [active, setActive] = useState("");
   const [joined, setJoined] = useState(false);
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const c = t[lang];
 
@@ -509,19 +510,31 @@ function Index() {
                 <motion.form
                   key="form"
                   exit={{ opacity: 0, y: -10 }}
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    // shortcut: mailto opens user's mail client directly, upgrade to server-side API when backend is added
-                    const isVi = lang === "vi";
-                    const subject = isVi
-                      ? "[VieBee Waitlist] Đăng ký trải nghiệm sớm"
-                      : "[VieBee Waitlist] Early Access Registration";
-                    const body = isVi
-                      ? `Kính gửi Đội ngũ VieBee,\r\n\r\nTôi muốn đăng ký tham gia danh sách chờ trải nghiệm sớm nền tảng du lịch văn hoá bản địa VieBee.\r\n\r\nThông tin liên hệ của tôi:\r\n- Họ và tên: [Vui lòng điền họ và tên]\r\n- Số điện thoại: [Vui lòng điền số điện thoại]\r\n- Email: ${email.trim()}\r\n\r\nRất mong sớm nhận được thông tin từ VieBee!\r\n\r\nTrân trọng,`
-                      : `Dear VieBee Team,\r\n\r\nI would like to join the early access waitlist for VieBee to discover authentic local workshops in Vietnam.\r\n\r\nHere are my contact details:\r\n- Full Name: [Please enter your full name]\r\n- Phone Number: [Please enter your phone number]\r\n- Email: ${email.trim()}\r\n\r\nLooking forward to hearing from you!\r\n\r\nBest regards,`;
-
-                    window.location.href = `mailto:viebee.contact@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                    setJoined(true);
+                    if (!email || isSubmitting) return;
+                    setIsSubmitting(true);
+                    try {
+                      // shortcut: FormSubmit free endpoint relays directly to Gmail without a dedicated backend; requires one-time email confirmation on first run
+                      await fetch("https://formsubmit.co/ajax/viebee.contact@gmail.com", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                          Accept: "application/json",
+                        },
+                        body: JSON.stringify({
+                          email: email.trim(),
+                          _subject: "[VieBee Waitlist] New Early Access Registration",
+                          _captcha: "false",
+                          message: `New early access waitlist signup: ${email.trim()}`,
+                        }),
+                      });
+                    } catch (err) {
+                      console.error("Waitlist submission error:", err);
+                    } finally {
+                      setIsSubmitting(false);
+                      setJoined(true);
+                    }
                   }}
                   className="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:flex-row"
                 >
@@ -535,9 +548,10 @@ function Index() {
                   />
                   <button
                     type="submit"
-                    className="rounded-2xl border-2 border-ink bg-primary px-6 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1"
+                    disabled={isSubmitting}
+                    className="rounded-2xl border-2 border-ink bg-primary px-6 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 disabled:opacity-60"
                   >
-                    {c.join}
+                    {isSubmitting ? "..." : c.join}
                   </button>
                 </motion.form>
               )}
