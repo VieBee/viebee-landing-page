@@ -68,6 +68,8 @@ const t = {
       [135.5, "M", "domestic trips in 2025"],
     ],
     finalTitle: ["Be the first to", "fly with us."],
+    fullName: "Your full name",
+    phone: "Vietnamese phone number (optional)",
     email: "your@email.com",
     thanks: "You're on the list! 🐝",
   },
@@ -107,6 +109,8 @@ const t = {
       [135.5, "Tr", "lượt khách nội địa năm 2025"],
     ],
     finalTitle: ["Hãy là người đầu tiên", "bay cùng chúng tôi."],
+    fullName: "Họ và tên của bạn",
+    phone: "Số điện thoại Việt Nam (tuỳ chọn)",
     email: "email@cuaban.com",
     thanks: "Bạn đã có tên trong danh sách! 🐝",
   },
@@ -173,6 +177,8 @@ function Index() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const [joined, setJoined] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -512,7 +518,7 @@ function Index() {
                   exit={{ opacity: 0, y: -10 }}
                   onSubmit={async (e) => {
                     e.preventDefault();
-                    if (!email || isSubmitting) return;
+                    if (!email || !fullName.trim() || isSubmitting) return;
                     setIsSubmitting(true);
                     try {
                       // shortcut: FormSubmit free endpoint relays directly to Gmail without a dedicated backend; requires one-time email confirmation on first run
@@ -523,10 +529,12 @@ function Index() {
                           Accept: "application/json",
                         },
                         body: JSON.stringify({
+                          name: fullName.trim(),
                           email: email.trim(),
+                          phone: phone.trim() || "Not provided",
                           _subject: "[VieBee Waitlist] New Early Access Registration",
                           _captcha: "false",
-                          message: `New early access waitlist signup: ${email.trim()}`,
+                          message: `New early access waitlist signup:\n- Full Name: ${fullName.trim()}\n- Email: ${email.trim()}\n- Phone: ${phone.trim() || "Not provided"}`,
                         }),
                       });
                     } catch (err) {
@@ -536,20 +544,35 @@ function Index() {
                       setJoined(true);
                     }
                   }}
-                  className="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:flex-row"
+                  className="mx-auto mt-10 flex max-w-md flex-col gap-3"
                 >
+                  <input
+                    type="text"
+                    required
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    placeholder={c.fullName}
+                    className="rounded-2xl border-2 border-ink bg-card px-5 py-3.5 text-ink outline-none transition focus:shadow-pop"
+                  />
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={c.email}
-                    className="flex-1 rounded-2xl border-2 border-ink bg-card px-5 py-4 text-ink outline-none focus:shadow-pop"
+                    className="rounded-2xl border-2 border-ink bg-card px-5 py-3.5 text-ink outline-none transition focus:shadow-pop"
+                  />
+                  <input
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder={c.phone}
+                    className="rounded-2xl border-2 border-ink bg-card px-5 py-3.5 text-ink outline-none transition focus:shadow-pop"
                   />
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="rounded-2xl border-2 border-ink bg-primary px-6 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 disabled:opacity-60"
+                    className="mt-1 rounded-2xl border-2 border-ink bg-primary px-6 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 disabled:opacity-60 cursor-pointer"
                   >
                     {isSubmitting ? "..." : c.join}
                   </button>
