@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode, type MouseEvent } from "react";
 import {
   motion,
@@ -10,7 +10,20 @@ import {
   animate,
   AnimatePresence,
 } from "framer-motion";
-import { Map, Languages, Smartphone, Play, ShieldCheck, MapPin, CalendarCheck, Sparkles, ArrowRight, Mail, Copy, Check } from "lucide-react";
+import {
+  Map,
+  Languages,
+  Smartphone,
+  Play,
+  ShieldCheck,
+  MapPin,
+  CalendarCheck,
+  Sparkles,
+  ArrowRight,
+  Mail,
+  Copy,
+  Check,
+} from "lucide-react";
 import { BrushHighlight, BrushUnderline, BrushCircle } from "@/components/Brush";
 
 const logoSrc = "/viebee-light-bg-yellow.png";
@@ -34,6 +47,7 @@ type Lang = "en" | "vi";
 const t = {
   en: {
     nav: ["Features", "Hosts", "Why now"],
+    upcomingNav: "Upcoming Event",
     join: "Join Waitlist",
     badge: "Peer-to-peer cultural travel",
     h1a: "Experience",
@@ -42,6 +56,7 @@ const t = {
     sub: "Discover Vietnam beyond the guidebooks through the people who live it.",
     cta: "See How It Works",
     cta2: "Become a host",
+    ctaUpcoming: "Explore Upcoming Event",
     marquee: ["Phở cooking", "Silk weaving", "Bát Tràng pottery", "Bamboo crafting", "Áo dài tailoring", "Embroidery", "Coffee farming", "Street food walks"],
     howTitle: ["Three taps to", "real culture"],
     how: [
@@ -75,6 +90,7 @@ const t = {
   },
   vi: {
     nav: ["Tính năng", "Hosts", "Vì sao"],
+    upcomingNav: "Sự kiện sắp tới",
     join: "Tham gia ngay",
     badge: "Du lịch văn hoá ngang hàng",
     h1a: "Trải nghiệm",
@@ -83,6 +99,7 @@ const t = {
     sub: "Khám phá Việt Nam vượt xa những cuốn cẩm nang du lịch qua chính những người đang sống ở đó.",
     cta: "Xem cách hoạt động",
     cta2: "Trở thành Host",
+    ctaUpcoming: "Xem sự kiện sắp tới",
     marquee: ["Nấu phở", "Dệt lụa", "Gốm Bát Tràng", "Đan tre", "May áo dài", "Thêu tay", "Trồng cà phê", "Ẩm thực đường phố"],
     howTitle: ["Ba chạm đến", "văn hoá thật"],
     how: [
@@ -96,7 +113,6 @@ const t = {
       ["Bản đồ văn hoá", "Những viên ngọc ẩn, trên bản đồ."],
       ["AI Copilot", "Dịch thời gian thực + bối cảnh văn hoá."],
       ["Đón khách dễ dàng", "Tạo workshop trong vài phút."],
-      ["Đã xác minh", "Hosts được cộng đồng kiểm chứng."],
     ],
     hostKicker: "Cho Host",
     hostTitle: ["Tay nghề của bạn", "đáng được chia sẻ."],
@@ -116,7 +132,7 @@ const t = {
   },
 };
 
-const ids = ["how", "features", "hosts", "why"];
+const ids = ["features", "hosts", "why"];
 
 function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
   return (
@@ -254,6 +270,13 @@ function Index() {
             <span className={`font-bold text-primary transition-all ${scrolled ? "text-lg" : "text-xl"}`}>VieBee</span>
           </a>
           <div className="hidden items-center gap-0.5 md:flex">
+            <Link
+              to="/upcoming"
+              className="relative rounded-lg px-3 py-1.5 text-sm font-semibold text-primary transition-colors hover:bg-honey/30 flex items-center gap-1.5"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span>{c.upcomingNav}</span>
+            </Link>
             {c.nav.map((n, i) => (
               <a
                 key={n}
@@ -289,7 +312,7 @@ function Index() {
           mx.set(e.clientX - r.left - r.width / 2);
           my.set(e.clientY - r.top - r.height / 2);
         }}
-        className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 pt-24"
+        className="relative flex min-h-screen lg:h-screen items-center justify-center overflow-hidden bg-background px-6 pt-16 md:pt-0"
       >
         <div className="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-honey/40 blur-3xl" />
         <div className="pointer-events-none absolute -right-20 bottom-10 h-[28rem] w-[28rem] rounded-full bg-sky blur-3xl" />
@@ -309,13 +332,24 @@ function Index() {
         />
 
         <div className="relative z-10 text-center">
-          <motion.span
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex -rotate-2 items-center gap-2 rounded-full border-2 border-ink bg-honey px-4 py-1 text-xs font-semibold text-ink shadow-pop"
+            className="flex flex-wrap items-center justify-center gap-2.5"
           >
-            {c.badge}
-          </motion.span>
+            <span className="inline-flex -rotate-2 items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1 text-xs font-semibold text-ink shadow-pop">
+              {c.badge}
+            </span>
+            <Link
+              to="/upcoming"
+              className="group inline-flex rotate-1 items-center gap-2 rounded-full border-2 border-ink bg-honey px-4 py-1 text-xs font-bold text-ink shadow-pop transition hover:-translate-y-0.5 hover:shadow-soft"
+            >
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>{lang === "en" ? "Upcoming Event: The Saigon Commute" : "Sự kiện sắp tới: Chuyện Đi Lại"}</span>
+              <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+
           <AnimatePresence mode="wait">
             <motion.h1
               key={lang}
@@ -323,7 +357,7 @@ function Index() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="mt-8 text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-7xl md:text-8xl"
+              className="mt-4 md:mt-6 text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight text-foreground"
             >
               {c.h1a} <BrushHighlight>{c.h1b}</BrushHighlight>
               <br />
@@ -332,17 +366,24 @@ function Index() {
               </span>
             </motion.h1>
           </AnimatePresence>
-          <p className="mx-auto mt-8 max-w-md text-lg font-light text-muted-foreground">{c.sub}</p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <p className="mx-auto mt-4 md:mt-5 max-w-md text-base md:text-lg font-light text-muted-foreground">{c.sub}</p>
+          <div className="mt-6 md:mt-8 flex flex-wrap justify-center gap-3 md:gap-4">
+            <Link
+              to="/upcoming"
+              className="group inline-flex items-center gap-2 rounded-2xl border-2 border-ink bg-honey px-6 py-3.5 font-bold text-ink shadow-pop transition hover:-translate-y-1 hover:translate-x-[-2px]"
+            >
+              <span>{c.ctaUpcoming}</span>
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </Link>
             <a
               href="#features"
-              className="group inline-flex items-center gap-2 rounded-2xl border-2 border-ink bg-primary px-7 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 hover:translate-x-[-2px]"
+              className="group inline-flex items-center gap-2 rounded-2xl border-2 border-ink bg-primary px-6 py-3.5 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 hover:translate-x-[-2px]"
             >
-              {c.cta} <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+              {c.cta}
             </a>
             <a
               href="#hosts"
-              className="inline-flex items-center rounded-2xl border-2 border-ink bg-card px-7 py-4 font-medium text-ink transition hover:-translate-y-1 hover:shadow-pop"
+              className="inline-flex items-center rounded-2xl border-2 border-ink bg-card px-6 py-3.5 font-medium text-ink transition hover:-translate-y-1 hover:shadow-pop"
             >
               {c.cta2}
             </a>
@@ -416,25 +457,28 @@ function Index() {
       </section> */}
 
       {/* FEATURES (bento) */}
-      <section id="features" className="bg-sky px-6 py-28">
-        <div className="mx-auto max-w-5xl">
+      <section
+        id="features"
+        className="relative flex min-h-screen lg:h-screen flex-col justify-center items-center overflow-hidden border-b-2 border-ink bg-sky px-4 md:px-6 py-12 lg:py-0"
+      >
+        <div className="mx-auto w-full max-w-5xl">
           <Reveal>
-            <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl">
               {c.featTitle[0]} {c.featTitle[1]} <br />
               <BrushHighlight>{c.featTitle[2]}</BrushHighlight>
             </h2>
           </Reveal>
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
+          <div className="mt-6 md:mt-8 grid gap-4 md:grid-cols-3">
             {c.f.map(([title, sub], i) => {
               const I = featIcons[i] ?? Map;
               const big = i === 0 || i === 3;
               return (
                 <Reveal key={i} delay={i * 0.1} className={big ? "md:col-span-2" : ""}>
-                  <TiltCard className={`flex h-full min-h-56 flex-col justify-between rounded-3xl border-2 border-ink p-8 shadow-pop ${featTones[i]}`}>
-                    <I className="h-10 w-10" strokeWidth={1.5} />
+                  <TiltCard className={`flex h-full min-h-36 md:min-h-44 flex-col justify-between rounded-2xl md:rounded-3xl border-2 border-ink p-5 md:p-6 shadow-pop ${featTones[i]}`}>
+                    <I className="h-8 w-8 md:h-9 md:w-9" strokeWidth={1.5} />
                     <div>
-                      <h3 className="text-2xl font-bold">{title}</h3>
-                      <p className="mt-1 opacity-80">{sub}</p>
+                      <h3 className="text-xl md:text-2xl font-bold">{title}</h3>
+                      <p className="mt-1 text-xs md:text-sm opacity-80">{sub}</p>
                     </div>
                   </TiltCard>
                 </Reveal>
@@ -445,24 +489,27 @@ function Index() {
       </section>
 
       {/* HOSTS */}
-      <section id="hosts" className="bg-ink px-6 py-28 text-background">
-        <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-2">
+      <section
+        id="hosts"
+        className="relative flex min-h-screen lg:h-screen flex-col justify-center items-center overflow-hidden border-b-2 border-ink bg-ink px-4 md:px-6 py-12 lg:py-0 text-background"
+      >
+        <div className="mx-auto grid w-full max-w-5xl items-center gap-8 md:gap-12 md:grid-cols-2">
           <Reveal>
-            <p className="text-lg font-semibold text-honey">{c.hostKicker}</p>
-            <h2 className="mt-4 text-4xl font-bold leading-tight md:text-6xl">
+            <p className="text-base md:text-lg font-semibold text-honey">{c.hostKicker}</p>
+            <h2 className="mt-2 md:mt-3 text-3xl font-bold leading-tight md:text-5xl">
               {c.hostTitle[0]} <span className="text-honey">{c.hostTitle[1]}</span>
             </h2>
-            <p className="mt-6 max-w-sm font-light text-background/70">{c.hostSub}</p>
+            <p className="mt-3 md:mt-4 max-w-sm text-sm md:text-base font-light text-background/70">{c.hostSub}</p>
           </Reveal>
-          <div className="space-y-3">
+          <div className="space-y-2.5">
             {c.hostList.map((h, i) => (
               <Reveal key={h} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ x: 12, rotate: i % 2 ? 1 : -1 }}
-                  className="flex items-center gap-4 rounded-2xl border border-background/15 bg-background/5 px-6 py-5"
+                  whileHover={{ x: 10, rotate: i % 2 ? 1 : -1 }}
+                  className="flex items-center gap-4 rounded-xl border border-background/15 bg-background/5 px-5 py-3 md:py-3.5"
                 >
-                  <span className="text-2xl font-bold text-honey">0{i + 1}</span>
-                  <span className="text-lg">{h}</span>
+                  <span className="text-xl md:text-2xl font-bold text-honey">0{i + 1}</span>
+                  <span className="text-base md:text-lg">{h}</span>
                 </motion.div>
               </Reveal>
             ))}
@@ -471,20 +518,23 @@ function Index() {
       </section>
 
       {/* WHY NOW */}
-      <section id="why" className="bg-background px-6 py-28">
-        <div className="mx-auto max-w-5xl text-center">
+      <section
+        id="why"
+        className="relative flex min-h-screen lg:h-screen flex-col justify-center items-center overflow-hidden border-b-2 border-ink bg-background px-4 md:px-6 py-12 lg:py-0"
+      >
+        <div className="mx-auto w-full max-w-5xl text-center">
           <Reveal>
-            <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl">
               {c.whyTitle[0]} <BrushUnderline><span className="text-primary">{c.whyTitle[1]}</span></BrushUnderline>
             </h2>
           </Reveal>
-          <div className="mt-16 grid gap-10 md:grid-cols-3">
+          <div className="mt-8 md:mt-12 grid gap-6 md:grid-cols-3">
             {c.stats.map(([n, s, label], i) => (
               <Reveal key={i} delay={i * 0.15}>
-                <div className="text-6xl font-bold text-primary md:text-7xl">
+                <div className="text-5xl md:text-6xl font-bold text-primary">
                   <Counter to={n as number} suffix={s as string} />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground">{label}</p>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground">{label}</p>
               </Reveal>
             ))}
           </div>
@@ -492,11 +542,14 @@ function Index() {
       </section>
 
       {/* JOIN */}
-      <section id="join" className="relative overflow-hidden bg-honey px-6 py-28">
-        <img src={beeSrc} alt="" className="absolute -left-10 top-6 w-56 mix-blend-multiply animate-wiggle" />
-        <div className="relative mx-auto max-w-2xl text-center">
+      <section
+        id="join"
+        className="relative flex min-h-screen lg:h-screen flex-col justify-center items-center overflow-hidden bg-honey px-4 md:px-6 py-12 lg:py-0"
+      >
+        <img src={beeSrc} alt="" className="absolute -left-10 top-6 w-44 md:w-56 mix-blend-multiply animate-wiggle" />
+        <div className="relative mx-auto w-full max-w-2xl text-center">
           <Reveal>
-            <h2 className="text-4xl font-bold leading-tight text-ink md:text-6xl">
+            <h2 className="text-3xl font-bold leading-tight text-ink md:text-5xl">
               {c.finalTitle[0]} <br />
               <span className="text-primary">{c.finalTitle[1]}</span>
             </h2>
@@ -508,7 +561,7 @@ function Index() {
                   key="ok"
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="mt-10 inline-block rounded-2xl border-2 border-ink bg-card px-6 py-4 text-lg font-semibold text-ink shadow-pop"
+                  className="mt-8 inline-block rounded-2xl border-2 border-ink bg-card px-6 py-4 text-base md:text-lg font-semibold text-ink shadow-pop"
                 >
                   {c.thanks}
                 </motion.p>
@@ -544,7 +597,7 @@ function Index() {
                       setJoined(true);
                     }
                   }}
-                  className="mx-auto mt-10 flex max-w-md flex-col gap-3"
+                  className="mx-auto mt-6 md:mt-8 flex max-w-md w-full flex-col gap-2.5"
                 >
                   <input
                     type="text"
@@ -552,7 +605,7 @@ function Index() {
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder={c.fullName}
-                    className="rounded-2xl border-2 border-ink bg-card px-5 py-3.5 text-ink outline-none transition focus:shadow-pop"
+                    className="rounded-xl border-2 border-ink bg-card px-4 py-3 text-ink outline-none transition focus:shadow-pop text-sm"
                   />
                   <input
                     type="email"
@@ -560,19 +613,19 @@ function Index() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={c.email}
-                    className="rounded-2xl border-2 border-ink bg-card px-5 py-3.5 text-ink outline-none transition focus:shadow-pop"
+                    className="rounded-xl border-2 border-ink bg-card px-4 py-3 text-ink outline-none transition focus:shadow-pop text-sm"
                   />
                   <input
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder={c.phone}
-                    className="rounded-2xl border-2 border-ink bg-card px-5 py-3.5 text-ink outline-none transition focus:shadow-pop"
+                    className="rounded-xl border-2 border-ink bg-card px-4 py-3 text-ink outline-none transition focus:shadow-pop text-sm"
                   />
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="mt-1 rounded-2xl border-2 border-ink bg-primary px-6 py-4 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 disabled:opacity-60 cursor-pointer"
+                    className="mt-1 rounded-xl border-2 border-ink bg-primary px-5 py-3.5 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 disabled:opacity-60 cursor-pointer text-sm"
                   >
                     {isSubmitting ? "..." : c.join}
                   </button>
