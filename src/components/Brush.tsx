@@ -25,11 +25,24 @@ export function BrushHighlight({ children, tone = "honey" }: { children: ReactNo
 }
 
 /** Scribbled underline that draws itself. */
-export function BrushUnderline({ children }: { children: ReactNode }) {
+export function BrushUnderline({
+  children,
+  tone = "primary",
+}: {
+  children: ReactNode;
+  tone?: "primary" | "honey";
+}) {
   return (
     <span className="relative inline-block whitespace-nowrap">
       <span className="relative">{children}</span>
-      <svg viewBox="0 0 300 30" preserveAspectRatio="none" className="absolute -bottom-3 left-0 h-4 w-full text-primary">
+      <svg
+        viewBox="0 0 300 30"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        className={`pointer-events-none absolute -bottom-2.5 left-0 h-3.5 w-full ${
+          tone === "honey" ? "text-honey" : "text-primary"
+        }`}
+      >
         <motion.path
           d="M5 20 C 60 5, 120 28, 180 12 S 270 8, 295 18"
           fill="none"
@@ -39,7 +52,7 @@ export function BrushUnderline({ children }: { children: ReactNode }) {
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.9, delay: 0.35 }}
         />
       </svg>
     </span>

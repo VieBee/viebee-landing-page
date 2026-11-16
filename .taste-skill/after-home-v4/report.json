@@ -1,0 +1,1844 @@
+{
+ "url": "http://127.0.0.1:4175/",
+ "at": "2026-11-16T18:14:28.615Z",
+ "allow": [
+  "palette-cream"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.96,
+    0.59,
+    0.81,
+    0.92,
+    0.9
+   ],
+   "motion": {
+    "elements": 26,
+    "css": 1,
+    "transitions": 6,
+    "scripted": 19,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3607,
+     "screens": 4,
+     "words": 267,
+     "img": 9,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "vb-hero-bg.jpg",
+      "vb-sample-3.jpg",
+      "vb-sample-1.jpg",
+      "vb-sample-5.png",
+      "vb-sample-4.jpg",
+      "vb-sample-6.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Experience Vietnam through its people",
+     "words": 5,
+     "chars": 37,
+     "lines": 2,
+     "size": 72,
+     "vw": 5,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.47,
+     "top": 287,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Experience Vietnam through its people",
+     "words": 5,
+     "lines": 2,
+     "size": 72,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "Experience Vietnam through its people",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 72,
+      "vw": 5,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 287,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Built for curious travelers",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 48,
+      "vw": 3.3,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 1000,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Vietnam is buzzing",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 2175,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "21.2M",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.07,
+      "top": 2289,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "20.4%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.07,
+      "top": 2443,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "135.5M",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.08,
+      "top": 2597,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Be the first to fly with us",
+      "words": 7,
+      "chars": 27,
+      "lines": 2,
+      "size": 48,
+      "vw": 3.3,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 2941,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      36,
+      48,
+      72
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 18,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10
+     },
+     "measureChars": 60,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "SN Pro",
+      "text": "Experience Vietnam through"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#0d111b",
+       "top": 0,
+       "hsl": {
+        "h": 223,
+        "s": 0.35,
+        "l": 0.08
+       }
+      },
+      {
+       "color": "#dbe8ff",
+       "top": 2055,
+       "hsl": {
+        "h": 218,
+        "s": 1,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#fad957",
+       "top": 2773,
+       "hsl": {
+        "h": 48,
+        "s": 0.94,
+        "l": 0.66
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0d111b",
+       "share": 0.54
+      },
+      {
+       "color": "#3d4047",
+       "share": 0.26
+      },
+      {
+       "color": "#fffaec",
+       "share": 0.14
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.02
+      },
+      {
+       "color": "#fff9ec",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#0d111b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 3,
+     "radius": 18,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Explore upcoming event",
+      "Join waitlist"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 13,
+     "boxRadius": 18,
+     "squareMedia": 1,
+     "roundedMedia": 5,
+     "mediaRadius": 18,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.92
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3607,
+    "margins": {
+     "left": 176,
+     "right": 176
+    },
+    "sections": [
+     {
+      "sel": "section#top.relative.flex",
+      "tag": "section",
+      "top": 0,
+      "height": 828,
+      "words": 43,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Experience Vietnam",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 176,
+      "right": 190,
+      "textLeft": 176,
+      "textRight": 190,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#features.bg-background.py-20",
+      "tag": "section",
+      "top": 888,
+      "height": 1167,
+      "words": 91,
+      "media": 4,
+      "middle": 22,
+      "heading": {
+       "text": "Built for curious travelers",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 209,
+      "textLeft": 176,
+      "textRight": 209,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#why.border-y-2.border-ink",
+      "tag": "section",
+      "top": 2055,
+      "height": 718,
+      "words": 40,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Vietnam is buzzing",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 192,
+      "textLeft": 176,
+      "textRight": 192,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#join.bg-honey.py-20",
+      "tag": "section",
+      "top": 2773,
+      "height": 614,
+      "words": 34,
+      "media": 0,
+      "middle": 191,
+      "heading": {
+       "text": "Be the first to fly with us",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 210,
+      "textLeft": 176,
+      "textRight": 397,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 3387,
+      "height": 220,
+      "words": 33,
+      "media": 0,
+      "middle": 57,
+      "heading": null,
+      "left": 176,
+      "right": 176,
+      "textLeft": 176,
+      "textRight": 216,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Experience Vietnam through its people",
+      "size": 72,
+      "top": 287,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 176,
+      "n": 7
+     },
+     {
+      "x": 758,
+      "n": 4
+     },
+     {
+      "x": 1032,
+      "n": 4
+     },
+     {
+      "x": 728,
+      "n": 2
+     },
+     {
+      "x": 457,
+      "n": 1
+     },
+     {
+      "x": 651,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 19,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.98,
+    0.83,
+    0.74,
+    0.98,
+    0.88,
+    0.88
+   ],
+   "motion": {
+    "elements": 26,
+    "css": 1,
+    "transitions": 6,
+    "scripted": 19,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5193,
+     "screens": 5.1,
+     "words": 267,
+     "img": 9,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "vb-hero-bg.jpg",
+      "vb-sample-3.jpg",
+      "vb-sample-1.jpg",
+      "vb-sample-5.png",
+      "vb-sample-4.jpg",
+      "vb-sample-6.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Experience Vietnam through its people",
+     "words": 5,
+     "chars": 37,
+     "lines": 2,
+     "size": 72,
+     "vw": 9.4,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.88,
+     "top": 334,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Experience Vietnam through its people",
+     "words": 5,
+     "lines": 2,
+     "size": 72,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "Experience Vietnam through its people",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 72,
+      "vw": 9.4,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 334,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Built for curious travelers",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 48,
+      "vw": 6.3,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1114,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Vietnam is buzzing",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 48,
+      "vw": 6.3,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2958,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "21.2M",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.13,
+      "top": 3612,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "20.4%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 3710,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "135.5M",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 3808,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Be the first to fly with us",
+      "words": 7,
+      "chars": 27,
+      "lines": 1,
+      "size": 48,
+      "vw": 6.3,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4096,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      36,
+      48,
+      72
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 18,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 72,
+      "vw": 9.4,
+      "font": "SN Pro",
+      "text": "Experience Vietnam through"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#0d111b",
+       "top": 0,
+       "hsl": {
+        "h": 223,
+        "s": 0.35,
+        "l": 0.08
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1280,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#dbe8ff",
+       "top": 2844,
+       "hsl": {
+        "h": 218,
+        "s": 1,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#fad957",
+       "top": 3984,
+       "hsl": {
+        "h": 48,
+        "s": 0.94,
+        "l": 0.66
+       }
+      },
+      {
+       "color": "#f3efe6",
+       "top": 4865,
+       "hsl": {
+        "h": 42,
+        "s": 0.35,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0d111b",
+       "share": 0.54
+      },
+      {
+       "color": "#3d4047",
+       "share": 0.26
+      },
+      {
+       "color": "#fffaec",
+       "share": 0.14
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.02
+      },
+      {
+       "color": "#fff9ec",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#0d111b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 3,
+     "radius": 18,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Explore upcoming event",
+      "Join waitlist"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 13,
+     "boxRadius": 18,
+     "squareMedia": 1,
+     "roundedMedia": 5,
+     "mediaRadius": 18,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.92
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5193,
+    "margins": {
+     "left": 32,
+     "right": 34
+    },
+    "sections": [
+     {
+      "sel": "section#top.relative.flex",
+      "tag": "section",
+      "top": 0,
+      "height": 942,
+      "words": 43,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Experience Vietnam",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 82,
+      "textLeft": 32,
+      "textRight": 82,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#features.bg-background.py-20",
+      "tag": "section",
+      "top": 1002,
+      "height": 1842,
+      "words": 91,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Built for curious travelers",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 47,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#why.border-y-2.border-ink",
+      "tag": "section",
+      "top": 2844,
+      "height": 1140,
+      "words": 40,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Vietnam is buzzing",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#join.bg-honey.py-20",
+      "tag": "section",
+      "top": 3984,
+      "height": 880,
+      "words": 34,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Be the first to fly with us",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 196,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 4865,
+      "height": 328,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 304,
+      "textLeft": 32,
+      "textRight": 304,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Experience Vietnam through its people",
+      "size": 72,
+      "top": 334,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 9
+     },
+     {
+      "x": 58,
+      "n": 4
+     },
+     {
+      "x": 418,
+      "n": 4
+     },
+     {
+      "x": 191,
+      "n": 1
+     },
+     {
+      "x": 313,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 19,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.99,
+    0.85,
+    0.74,
+    0.99,
+    0.84,
+    0.84
+   ],
+   "motion": {
+    "elements": 24,
+    "css": 1,
+    "transitions": 4,
+    "scripted": 19,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4401,
+     "screens": 5.2,
+     "words": 264,
+     "img": 9,
+     "video": 0,
+     "canvas": 0,
+     "svg": 11,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "vb-hero-bg.jpg",
+      "vb-sample-3.jpg",
+      "vb-sample-4.jpg",
+      "vb-sample-6.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Experience Vietnam through its people",
+     "words": 5,
+     "chars": 37,
+     "lines": 2,
+     "size": 36,
+     "vw": 9.2,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 229,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Experience Vietnam through its people",
+     "words": 5,
+     "lines": 2,
+     "size": 36,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "Experience Vietnam through its people",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 36,
+      "vw": 9.2,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 229,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Built for curious travelers",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 912,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Vietnam is buzzing",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2513,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "21.2M",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 2945,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "20.4%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 3039,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "135.5M",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 3133,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Be the first to fly with us",
+      "words": 7,
+      "chars": 27,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3370,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      20,
+      30,
+      36
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 18.1
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "SN Pro",
+      "text": "Experience Vietnam through"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#0d111b",
+       "top": 0,
+       "hsl": {
+        "h": 223,
+        "s": 0.35,
+        "l": 0.08
+       }
+      },
+      {
+       "color": "#dbe8ff",
+       "top": 2431,
+       "hsl": {
+        "h": 218,
+        "s": 1,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#fad957",
+       "top": 3290,
+       "hsl": {
+        "h": 48,
+        "s": 0.94,
+        "l": 0.66
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 3611,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f3efe6",
+       "top": 4065,
+       "hsl": {
+        "h": 42,
+        "s": 0.35,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0d111b",
+       "share": 0.55
+      },
+      {
+       "color": "#3d4047",
+       "share": 0.26
+      },
+      {
+       "color": "#fffaec",
+       "share": 0.14
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.03
+      },
+      {
+       "color": "#1530c7",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#0d111b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 3,
+     "radius": 18,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Explore upcoming event",
+      "Join waitlist"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 13,
+     "boxRadius": 18,
+     "squareMedia": 1,
+     "roundedMedia": 3,
+     "mediaRadius": 18,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.92
+     }
+    ],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4401,
+    "margins": {
+     "left": 20,
+     "right": 22
+    },
+    "sections": [
+     {
+      "sel": "section#top.relative.flex",
+      "tag": "section",
+      "top": 0,
+      "height": 776,
+      "words": 43,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Experience Vietnam",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 30,
+      "textLeft": 20,
+      "textRight": 30,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#features.bg-background.py-20",
+      "tag": "section",
+      "top": 832,
+      "height": 1598,
+      "words": 91,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Built for curious travelers",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 22,
+      "textLeft": 20,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#why.border-y-2.border-ink",
+      "tag": "section",
+      "top": 2431,
+      "height": 860,
+      "words": 40,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Vietnam is buzzing",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 22,
+      "textLeft": 20,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#join.bg-honey.py-20",
+      "tag": "section",
+      "top": 3290,
+      "height": 774,
+      "words": 34,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Be the first to fly with us",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 25,
+      "textLeft": 20,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 4065,
+      "height": 336,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 36,
+      "textLeft": 20,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Experience Vietnam through its people",
+      "size": 36,
+      "top": 229,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 9
+     },
+     {
+      "x": 42,
+      "n": 8
+     },
+     {
+      "x": 160,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 18,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-home-v4/desktop-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-home-v4/desktop-page-01.jpg",
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-home-v4/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-home-v4/tablet-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-home-v4/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-home-v4/mobile-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-home-v4/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

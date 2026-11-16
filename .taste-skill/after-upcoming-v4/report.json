@@ -1,0 +1,1113 @@
+{
+ "url": "http://127.0.0.1:4175/upcoming",
+ "at": "2026-11-16T18:10:00.034Z",
+ "allow": [
+  "palette-cream"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.52
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 900,
+     "screens": 1,
+     "words": 64,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 1,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Upcoming event",
+     "words": 2,
+     "chars": 14,
+     "lines": 1,
+     "size": 48,
+     "vw": 3.3,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.08,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.33,
+     "top": 311,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Upcoming event",
+     "words": 2,
+     "lines": 1,
+     "size": 48,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "Upcoming event",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.33,
+      "top": 311,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      24,
+      48
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 18,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10.4
+     },
+     "measureChars": 50,
+     "max": {
+      "size": 48,
+      "vw": 3.3,
+      "font": "SN Pro",
+      "text": "Upcoming event"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.39,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#3d4047",
+       "share": 0.64
+      },
+      {
+       "color": "#0d111b",
+       "share": 0.17
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.11
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.06
+      },
+      {
+       "color": "#1530c7",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#1530c7",
+      "hsl": {
+       "h": 231,
+       "s": 0.81,
+       "l": 0.43
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 4,
+     "radius": 18,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Join waitlist",
+      "Back to home",
+      "viebee.contact@gmail.com"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 22,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": true,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 900,
+    "margins": {
+     "left": 176,
+     "right": 176
+    },
+    "sections": [
+     {
+      "sel": "main.flex.flex-1",
+      "tag": "main",
+      "top": 0,
+      "height": 680,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Upcoming event",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 500,
+      "right": 500,
+      "textLeft": 500,
+      "textRight": 500,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 680,
+      "height": 220,
+      "words": 33,
+      "media": 0,
+      "middle": 69,
+      "heading": null,
+      "left": 176,
+      "right": 176,
+      "textLeft": 176,
+      "textRight": 216,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Upcoming event",
+      "size": 48,
+      "top": 311,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [],
+    "leftBlocks": 0,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.22,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 480,
+     "h": 600
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.68
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1024,
+     "screens": 1,
+     "words": 64,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 1,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Upcoming event",
+     "words": 2,
+     "chars": 14,
+     "lines": 1,
+     "size": 48,
+     "vw": 6.3,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.08,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.62,
+     "top": 319,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Upcoming event",
+     "words": 2,
+     "lines": 1,
+     "size": 48,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "Upcoming event",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 48,
+      "vw": 6.3,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.62,
+      "top": 319,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      24,
+      48
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 18,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10.4
+     },
+     "measureChars": 50,
+     "max": {
+      "size": 48,
+      "vw": 6.3,
+      "font": "SN Pro",
+      "text": "Upcoming event"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.39,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 149,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f3efe6",
+       "top": 696,
+       "hsl": {
+        "h": 42,
+        "s": 0.35,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#3d4047",
+       "share": 0.64
+      },
+      {
+       "color": "#0d111b",
+       "share": 0.17
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.11
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.06
+      },
+      {
+       "color": "#1530c7",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#1530c7",
+      "hsl": {
+       "h": 231,
+       "s": 0.81,
+       "l": 0.43
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 4,
+     "radius": 18,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Join waitlist",
+      "Back to home",
+      "viebee.contact@gmail.com"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 22,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": true,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1024,
+    "margins": {
+     "left": 32,
+     "right": 164
+    },
+    "sections": [
+     {
+      "sel": "main.flex.flex-1",
+      "tag": "main",
+      "top": 0,
+      "height": 696,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Upcoming event",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 164,
+      "right": 164,
+      "textLeft": 164,
+      "textRight": 164,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 696,
+      "height": 328,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 326,
+      "textLeft": 32,
+      "textRight": 326,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Upcoming event",
+      "size": 48,
+      "top": 319,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [],
+    "leftBlocks": 0,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.75,
+    0.88
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 984,
+     "screens": 1.2,
+     "words": 59,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 4,
+     "sections": 1,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Upcoming event",
+     "words": 2,
+     "chars": 14,
+     "lines": 1,
+     "size": 30,
+     "vw": 7.7,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.08,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.72,
+     "top": 266,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Upcoming event",
+     "words": 2,
+     "lines": 1,
+     "size": 30,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "Upcoming event",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.72,
+      "top": 266,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      20,
+      30
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10.4
+     },
+     "measureChars": 35,
+     "max": {
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "text": "Upcoming event"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.42,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 112,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f3efe6",
+       "top": 648,
+       "hsl": {
+        "h": 42,
+        "s": 0.35,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#3d4047",
+       "share": 0.62
+      },
+      {
+       "color": "#0d111b",
+       "share": 0.19
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.11
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#1530c7",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#1530c7",
+      "hsl": {
+       "h": 231,
+       "s": 0.81,
+       "l": 0.43
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 3,
+     "radius": 18,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Join waitlist",
+      "Back to home"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 22,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 984,
+    "margins": {
+     "left": 20,
+     "right": 36
+    },
+    "sections": [
+     {
+      "sel": "main.flex.flex-1",
+      "tag": "main",
+      "top": 0,
+      "height": 648,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Upcoming event",
+       "size": 30,
+       "tag": "h1"
+      },
+      "left": 55,
+      "right": 55,
+      "textLeft": 55,
+      "textRight": 55,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 648,
+      "height": 336,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 36,
+      "textLeft": 20,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Upcoming event",
+      "size": 30,
+      "top": 266,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [],
+    "leftBlocks": 0,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 48px (3.3vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 1 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 768,
+   "message": "The page sits off-centre: its content comes to 32px from the left edge but only to 164px from the right, at 768px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 390,
+   "message": "The margins differ: 20px on the left, 36px on the right, at 390px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 390,
+   "message": "The h1 is a bare name (\"Upcoming event\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v4/desktop-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v4/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v4/tablet-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v4/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v4/mobile-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v4/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

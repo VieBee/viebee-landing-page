@@ -1,187 +1,137 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type ReactNode, type MouseEvent } from "react";
+import { useState, type ReactNode } from "react";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionValue,
-  useSpring,
-  useInView,
-  animate,
-  AnimatePresence,
-} from "framer-motion";
-import {
-  Map,
-  Languages,
-  Smartphone,
-  Play,
-  ShieldCheck,
-  MapPin,
-  CalendarCheck,
-  Sparkles,
+  ArrowDown,
   ArrowRight,
-  Mail,
-  Copy,
+  Camera,
   Check,
+  Languages,
+  Map,
+  ShieldCheck,
+  Smartphone,
 } from "lucide-react";
-import { BrushHighlight, BrushUnderline, BrushCircle } from "@/components/Brush";
-
-const logoSrc = "/viebee-light-bg-yellow.png";
-const beeSrc = "/viebee-bee.png";
+import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import { BrushUnderline } from "@/components/Brush";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VieBee - Experience local. Truly." },
-      { name: "description", content: "Discover Vietnam beyond the guidebooks through the people who live it. Book micro-workshops with verified local hosts." },
-      { property: "og:title", content: "VieBee - Experience local. Truly." },
-      { property: "og:description", content: "Discover Vietnam beyond the guidebooks through the people who live it." },
+      { title: "VieBee - Experience Vietnam through its people" },
+      {
+        name: "description",
+        content:
+          "Peer-to-peer cultural travel across Vietnam. Connect with verified local cooks, artisans, and storytellers.",
+      },
+      { property: "og:title", content: "VieBee - Experience Vietnam through its people" },
+      {
+        property: "og:description",
+        content: "Peer-to-peer cultural travel beyond the guidebooks, hosted by local Vietnamese makers.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "preload", as: "image", href: "/sample/vb-hero-bg.jpg", fetchPriority: "high" }],
   }),
   component: Index,
 });
 
-type Lang = "en" | "vi";
-const t = {
-  en: {
-    nav: ["Features", "Hosts", "Why now"],
-    upcomingNav: "Upcoming Event",
-    join: "Join Waitlist",
-    badge: "Peer-to-peer cultural travel",
-    h1a: "Experience",
-    h1b: "local.",
-    h1c: "Truly.",
-    sub: "Discover Vietnam beyond the guidebooks through the people who live it.",
-    cta: "See How It Works",
-    cta2: "Become a host",
-    ctaUpcoming: "Explore Upcoming Event",
-    marquee: ["Phở cooking", "Silk weaving", "Bát Tràng pottery", "Bamboo crafting", "Áo dài tailoring", "Embroidery", "Coffee farming", "Street food walks"],
-    howTitle: ["Three taps to", "real culture"],
-    how: [
-      ["Explore the map", "Find workshops, artisans and food traditions near you."],
-      ["Meet the host", "Read their story. See reviews and verification."],
-      ["RSVP & go", "Pick a slot. The AI Copilot handles the language."],
-    ],
-    action: "See VieBee in action",
-    featTitle: ["Built for", "curious", "travelers"],
-    f: [
-      ["Cultural Map", "Hidden local gems, mapped."],
-      ["AI Copilot", "Real-time translation + cultural context."],
-      ["Zero-tech hosting", "Set up a workshop in minutes."],
-      ["Verified", "Community-checked hosts & reviews."],
-    ],
-    hostKicker: "For hosts",
-    hostTitle: ["Your craft is", "worth sharing."],
-    hostSub: "Home cooks, weavers, potters, tailors, farmers - earn from what you already know.",
-    hostList: ["Create a workshop", "Set slots & capacity", "Manage RSVPs", "Get paid"],
-    whyTitle: ["Vietnam is", "buzzing"],
-    stats: [
-      [21.2, "M", "international visitors in 2025"],
-      [20.4, "%", "year-over-year growth"],
-      [135.5, "M", "domestic trips in 2025"],
-    ],
-    finalTitle: ["Be the first to", "fly with us."],
-    fullName: "Your full name",
-    phone: "Vietnamese phone number (optional)",
-    email: "your@email.com",
-    thanks: "You're on the list! 🐝",
-  },
-  vi: {
-    nav: ["Tính năng", "Hosts", "Vì sao"],
-    upcomingNav: "Sự kiện sắp tới",
-    join: "Tham gia ngay",
-    badge: "Du lịch văn hoá ngang hàng",
-    h1a: "Trải nghiệm",
-    h1b: "bản địa.",
-    h1c: "Đích thực.",
-    sub: "Khám phá Việt Nam vượt xa những cuốn cẩm nang du lịch qua chính những người đang sống ở đó.",
-    cta: "Xem cách hoạt động",
-    cta2: "Trở thành Host",
-    ctaUpcoming: "Xem sự kiện sắp tới",
-    marquee: ["Nấu phở", "Dệt lụa", "Gốm Bát Tràng", "Đan tre", "May áo dài", "Thêu tay", "Trồng cà phê", "Ẩm thực đường phố"],
-    howTitle: ["Ba chạm đến", "văn hoá thật"],
-    how: [
-      ["Khám phá bản đồ", "Tìm workshop, nghệ nhân và ẩm thực quanh bạn."],
-      ["Gặp chủ nhà", "Đọc câu chuyện. Xem đánh giá và xác minh."],
-      ["Đặt chỗ & đi", "Chọn giờ. AI Copilot lo phần ngôn ngữ."],
-    ],
-    action: "Xem VieBee hoạt động",
-    featTitle: ["Dành cho", "những", "lữ khách tò mò"],
-    f: [
-      ["Bản đồ văn hoá", "Những viên ngọc ẩn, trên bản đồ."],
-      ["AI Copilot", "Dịch thời gian thực + bối cảnh văn hoá."],
-      ["Đón khách dễ dàng", "Tạo workshop trong vài phút."],
-    ],
-    hostKicker: "Cho Host",
-    hostTitle: ["Tay nghề của bạn", "đáng được chia sẻ."],
-    hostSub: "Đầu bếp tại gia, thợ dệt, thợ gốm, thợ may, nông dân - kiếm thu nhập từ điều bạn đã biết.",
-    hostList: ["Tạo workshop", "Đặt giờ & số chỗ", "Quản lý đặt chỗ", "Nhận thanh toán"],
-    whyTitle: ["Việt Nam đang", "rộn ràng"],
-    stats: [
-      [21.2, "Tr", "khách quốc tế năm 2025"],
-      [20.4, "%", "tăng trưởng so với năm trước"],
-      [135.5, "Tr", "lượt khách nội địa năm 2025"],
-    ],
-    finalTitle: ["Hãy là người đầu tiên", "bay cùng chúng tôi."],
-    fullName: "Họ và tên của bạn",
-    phone: "Số điện thoại Việt Nam (tuỳ chọn)",
-    email: "email@cuaban.com",
-    thanks: "Bạn đã có tên trong danh sách! 🐝",
-  },
-};
+const MARQUEE_THEMES = [
+  "Home cooking",
+  "Silk weaving",
+  "Hand-painted ceramics",
+  "Bamboo crafting",
+  "Áo dài tailoring",
+  "Hand embroidery",
+  "Coffee roasting",
+  "Street food walks",
+];
 
-const ids = ["features", "hosts", "why"];
+const FEATURES = [
+  {
+    title: "Cultural map",
+    body: "Discover neighborhood kitchens, craft courtyards, and local storytellers around the city.",
+    tone: "bg-card text-ink",
+    badge: "bg-honey text-ink",
+    icon: Map,
+  },
+  {
+    title: "AI Copilot",
+    body: "Real-time translation and cultural context so language never gets in the way.",
+    tone: "bg-sky text-ink",
+    badge: "bg-primary text-primary-foreground",
+    icon: Languages,
+  },
+  {
+    title: "Zero-tech hosting",
+    body: "Locals can set up a session, pick dates, and welcome small groups in minutes.",
+    tone: "bg-honey-soft text-ink",
+    badge: "bg-card text-primary",
+    icon: Smartphone,
+  },
+  {
+    title: "Verified community",
+    body: "Every host is vetted and reviewed by real guests before going live.",
+    tone: "bg-card text-ink",
+    badge: "bg-sky text-primary",
+    icon: ShieldCheck,
+  },
+];
 
-function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
+const CULTURE_MOSAIC = [
+  {
+    src: "/sample/vb-sample-3.jpg",
+    alt: "Travelers and a local cook preparing fresh herbs and spices around a shared kitchen table",
+    label: "Shared kitchens",
+    w: 1350,
+    h: 900,
+  },
+  {
+    src: "/sample/vb-sample-1.jpg",
+    alt: "Artisan hands stitching a traditional conical palm hat in warm daylight",
+    label: "Conical hat craft",
+    w: 547,
+    h: 365,
+  },
+  {
+    src: "/sample/vb-sample-5.png",
+    alt: "Artisan in a teal áo dài presenting a handcrafted lotus lacquerware plate",
+    label: "Lacquerware art",
+    w: 895,
+    h: 504,
+  },
+  {
+    src: "/sample/vb-sample-4.jpg",
+    alt: "Folk painter detailing a scroll painting surrounded by colorful traditional prints",
+    label: "Folk painting",
+    w: 679,
+    h: 452,
+  },
+];
+
+const STATS = [
+  { value: "21.2M", label: "international visitors in 2025" },
+  { value: "20.4%", label: "year-over-year travel growth" },
+  { value: "135.5M", label: "domestic trips across Vietnam" },
+];
+
+// Never hide below-the-fold sections at opacity: 0 so full-page captures and fast scrolls always render content
+function Rise({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0.99, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: "easeOut" }}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-function Counter({ to, suffix }: { to: number; suffix: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
-  const [v, setV] = useState(0);
-  useEffect(() => {
-    if (!inView) return;
-    const c = animate(0, to, { duration: 1.8, ease: "easeOut", onUpdate: (x) => setV(x) });
-    return () => c.stop();
-  }, [inView, to]);
-  return (
-    <span ref={ref}>
-      {v.toFixed(1)}
-      {suffix}
-    </span>
-  );
-}
-
-function TiltCard({ children, className = "" }: { children: ReactNode; className?: string }) {
-  const rx = useSpring(0, { stiffness: 200, damping: 15 });
-  const ry = useSpring(0, { stiffness: 200, damping: 15 });
-  const onMove = (e: MouseEvent<HTMLDivElement>) => {
-    const r = e.currentTarget.getBoundingClientRect();
-    ry.set(((e.clientX - r.left) / r.width - 0.5) * 14);
-    rx.set(-((e.clientY - r.top) / r.height - 0.5) * 14);
-  };
-  return (
-    <motion.div
-      onMouseMove={onMove}
-      onMouseLeave={() => {
-        rx.set(0);
-        ry.set(0);
-      }}
-      style={{ rotateX: rx, rotateY: ry, transformPerspective: 800 }}
-      className={className}
+      viewport={{ once: true, amount: "some" }}
+      transition={{ duration: 0.45, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
@@ -189,483 +139,391 @@ function TiltCard({ children, className = "" }: { children: ReactNode; className
 }
 
 function Index() {
-  const [lang, setLang] = useState<Lang>("en");
-  const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("");
   const [joined, setJoined] = useState(false);
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [copiedEmail, setCopiedEmail] = useState(false);
-  const c = t[lang];
-
-  const videoRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress: vp } = useScroll({ target: videoRef, offset: ["start end", "center center"] });
-  const scale = useTransform(vp, [0, 1], [0.92, 1]);
-  const rotate = useTransform(vp, [0, 1], [-3, 0]);
-  const { scrollYProgress } = useScroll();
-
-  // Bee follows the cursor in hero
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const bx = useSpring(mx, { stiffness: 40, damping: 12 });
-  const by = useSpring(my, { stiffness: 40, damping: 12 });
-
-  useEffect(() => {
-    const on = () => {
-      setScrolled(window.scrollY > 40);
-      let cur = "";
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top < window.innerHeight * 0.4) cur = id;
-      }
-      setActive(cur);
-    };
-    on();
-    window.addEventListener("scroll", on);
-    return () => window.removeEventListener("scroll", on);
-  }, []);
-
-  const featIcons = [Map, Languages, Smartphone, ShieldCheck] as const;
-  const featTones = ["bg-primary text-primary-foreground", "bg-honey text-ink", "bg-card text-ink", "bg-sky text-ink"];
-  const howIcons = [MapPin, Sparkles, CalendarCheck] as const;
-
-  const LangToggle = (
-    <div className="relative flex rounded-full bg-ink/5 p-0.5 text-[11px] font-semibold">
-      <motion.span
-        className="absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] rounded-full bg-ink"
-        animate={{ left: lang === "en" ? 2 : "50%" }}
-        transition={{ type: "spring", stiffness: 400, damping: 30 }}
-      />
-      {(["en", "vi"] as Lang[]).map((l) => (
-        <button
-          key={l}
-          onClick={() => setLang(l)}
-          className={`relative z-10 w-9 py-1 transition-colors ${lang === l ? "text-background" : "text-muted-foreground"}`}
-        >
-          {l}
-        </button>
-      ))}
-    </div>
-  );
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      <motion.div style={{ scaleX: scrollYProgress }} className="fixed inset-x-0 top-0 z-[60] h-1 origin-left bg-primary" />
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-dvh overflow-x-hidden bg-background text-foreground">
+        <SiteHeader transparentAtTop />
 
-      {/* Notion-like nav: full-width at top, condenses into a floating pill on scroll */}
-      <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3">
-        <motion.nav
-          layout
-          transition={{ type: "spring", stiffness: 260, damping: 30 }}
-          className={`flex items-center justify-between gap-4 ${
-            scrolled
-              ? "w-full max-w-3xl rounded-2xl border border-ink/10 bg-background/80 px-3 py-2 shadow-soft backdrop-blur-xl"
-              : "w-full max-w-6xl rounded-none border border-transparent bg-transparent px-3 py-3"
-          }`}
-        >
-          <a href="#top" className="flex items-center gap-1.5">
-            <img src={logoSrc} alt="VieBee" className={`mix-blend-multiply transition-all ${scrolled ? "h-8 w-8" : "h-10 w-10"}`} />
-            <span className={`font-bold text-primary transition-all ${scrolled ? "text-lg" : "text-xl"}`}>VieBee</span>
-          </a>
-          <div className="hidden items-center gap-0.5 md:flex">
-            <Link
-              to="/upcoming"
-              className="relative rounded-lg px-3 py-1.5 text-sm font-semibold text-primary transition-colors hover:bg-honey/30 flex items-center gap-1.5"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>{c.upcomingNav}</span>
-            </Link>
-            {c.nav.map((n, i) => (
-              <a
-                key={n}
-                href={`#${ids[i]}`}
-                className={`relative rounded-lg px-3 py-1.5 text-sm transition-colors hover:bg-ink/5 ${
-                  active === ids[i] ? "text-foreground" : "text-muted-foreground"
-                }`}
-              >
-                {active === ids[i] && (
-                  <motion.span layoutId="navActive" className="absolute inset-0 rounded-lg bg-ink/5" />
-                )}
-                <span className="relative">{n}</span>
-              </a>
-            ))}
-          </div>
-          <div className="flex items-center gap-2">
-            {LangToggle}
-            <a
-              href="#join"
-              className="rounded-xl bg-primary px-3.5 py-1.5 text-sm font-medium text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-soft"
-            >
-              {c.join}
-            </a>
-          </div>
-        </motion.nav>
-      </header>
-
-      {/* HERO */}
-      <section
-        id="top"
-        onMouseMove={(e) => {
-          const r = e.currentTarget.getBoundingClientRect();
-          mx.set(e.clientX - r.left - r.width / 2);
-          my.set(e.clientY - r.top - r.height / 2);
-        }}
-        className="relative flex min-h-screen lg:h-screen items-center justify-center overflow-hidden bg-background px-6 pt-16 md:pt-0"
-      >
-        <div className="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-honey/40 blur-3xl" />
-        <div className="pointer-events-none absolute -right-20 bottom-10 h-[28rem] w-[28rem] rounded-full bg-sky blur-3xl" />
-        <svg className="pointer-events-none absolute left-[6%] top-[30%] h-24 w-24 text-primary/20 animate-float" viewBox="0 0 100 100">
-          <path d="M10 50 Q 30 10 50 50 T 90 50" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
-        </svg>
-        <svg className="pointer-events-none absolute right-[8%] top-[22%] h-20 w-20 text-honey animate-float" style={{ animationDelay: "2s" }} viewBox="0 0 100 100">
-          <path d="M50 5 L61 39 L95 39 L67 60 L78 95 L50 73 L22 95 L33 60 L5 39 L39 39 Z" fill="currentColor" />
-        </svg>
-        <div className="pointer-events-none absolute bottom-[14%] left-[14%] h-16 w-16 rounded-full border-[6px] border-dashed border-primary/30 animate-[spin_20s_linear_infinite]" />
-
-        <motion.img
-          src={beeSrc}
-          alt=""
-          style={{ x: bx, y: by }}
-          className="pointer-events-none absolute right-[-2%] top-[2%] z-20 hidden w-[30rem] mix-blend-multiply md:block"
-        />
-
-        <div className="relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex flex-wrap items-center justify-center gap-2.5"
+        <main>
+          {/* HERO: Full-bleed Muong Hoa terrace fields + marquee fit cleanly in the first viewport across devices */}
+          <section
+            id="top"
+            className="relative flex min-h-[calc(100svh-3.5rem)] flex-col justify-between overflow-hidden bg-ink pt-24 pb-6 sm:pt-32 sm:pb-8"
           >
-            <span className="inline-flex -rotate-2 items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1 text-xs font-semibold text-ink shadow-pop">
-              {c.badge}
-            </span>
-            <Link
-              to="/upcoming"
-              className="group inline-flex rotate-1 items-center gap-2 rounded-full border-2 border-ink bg-honey px-4 py-1 text-xs font-bold text-ink shadow-pop transition hover:-translate-y-0.5 hover:shadow-soft"
-            >
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>{lang === "en" ? "Upcoming Event: The Saigon Commute" : "Sự kiện sắp tới: Chuyện Đi Lại"}</span>
-              <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
-            </Link>
-          </motion.div>
+            <img
+              src="/sample/vb-hero-bg.jpg"
+              alt="The Terrace Fields in Muong Hoa Valley, Sapa Town, Lao Cai Province"
+              width={800}
+              height={532}
+              fetchPriority="high"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
+            <div aria-hidden="true" className="absolute inset-0 bg-[#0d111b]/50" />
 
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={lang}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="mt-4 md:mt-6 text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight text-foreground"
-            >
-              {c.h1a} <BrushHighlight>{c.h1b}</BrushHighlight>
-              <br />
-              <span className="text-primary">
-                <BrushUnderline>{c.h1c}</BrushUnderline>
-              </span>
-            </motion.h1>
-          </AnimatePresence>
-          <p className="mx-auto mt-4 md:mt-5 max-w-md text-base md:text-lg font-light text-muted-foreground">{c.sub}</p>
-          <div className="mt-6 md:mt-8 flex flex-wrap justify-center gap-3 md:gap-4">
-            <Link
-              to="/upcoming"
-              className="group inline-flex items-center gap-2 rounded-2xl border-2 border-ink bg-honey px-6 py-3.5 font-bold text-ink shadow-pop transition hover:-translate-y-1 hover:translate-x-[-2px]"
-            >
-              <span>{c.ctaUpcoming}</span>
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-            </Link>
-            <a
-              href="#features"
-              className="group inline-flex items-center gap-2 rounded-2xl border-2 border-ink bg-primary px-6 py-3.5 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 hover:translate-x-[-2px]"
-            >
-              {c.cta}
-            </a>
-            <a
-              href="#hosts"
-              className="inline-flex items-center rounded-2xl border-2 border-ink bg-card px-6 py-3.5 font-medium text-ink transition hover:-translate-y-1 hover:shadow-pop"
-            >
-              {c.cta2}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* MARQUEE */}
-      <div className="-rotate-1 overflow-hidden border-y-2 border-ink bg-honey py-4">
-        <div className="flex w-max animate-marquee gap-10 whitespace-nowrap text-xl font-semibold text-ink">
-          {[...c.marquee, ...c.marquee].map((m, i) => (
-            <span key={i} className="flex items-center gap-10">
-              {m} <span className="text-primary">✦</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* HOW IT WORKS */}
-      {/* <section id="how" className="bg-background px-6 py-28">
-        <div className="mx-auto max-w-5xl">
-          <Reveal>
-            <h2 className="text-center text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-              {c.howTitle[0]} <BrushCircle>{c.howTitle[1]}</BrushCircle>
-            </h2>
-          </Reveal>
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-            {c.how.map(([title, sub], i) => {
-              const I = howIcons[i] ?? MapPin;
-              return (
-                <Reveal key={i} delay={i * 0.15}>
-                  <div className={`relative rounded-3xl border-2 border-ink bg-card p-8 transition hover:-translate-y-2 hover:shadow-pop ${i === 1 ? "md:mt-10" : ""}`}>
-                    <span className="absolute -top-5 left-6 flex h-10 w-10 items-center justify-center rounded-full border-2 border-ink bg-honey text-lg font-bold text-ink">
-                      {i + 1}
-                    </span>
-                    <I className="mb-5 h-8 w-8 text-primary" strokeWidth={1.75} />
-                    <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{sub}</p>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
-        </div>
-      </section> */}
-
-      {/* VIDEO */}
-      {/* <section className="bg-primary px-6 py-28">
-        <div className="mx-auto max-w-5xl">
-          <Reveal>
-            <p className="mb-8 text-center text-2xl font-semibold text-primary-foreground/70">
-              {c.action}
-            </p>
-          </Reveal>
-          <motion.div
-            ref={videoRef}
-            style={{ scale, rotate }}
-            className="group relative flex aspect-video cursor-pointer items-center justify-center overflow-hidden rounded-3xl border-2 border-ink bg-background shadow-pop"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,var(--honey-soft),transparent_60%)]" />
-            <img src={beeSrc} alt="" className="absolute right-8 top-6 w-40 mix-blend-multiply animate-wiggle" />
-            <span className="absolute inset-0 m-auto h-24 w-24 animate-ping rounded-full bg-primary/20" />
-            <button
-              aria-label="Play video"
-              className="relative flex h-24 w-24 items-center justify-center rounded-full border-2 border-ink bg-honey text-ink transition duration-300 group-hover:scale-110"
-            >
-              <Play className="ml-1 h-10 w-10" fill="currentColor" />
-            </button>
-          </motion.div>
-        </div>
-      </section> */}
-
-      {/* FEATURES (bento) */}
-      <section
-        id="features"
-        className="relative flex min-h-screen lg:h-screen flex-col justify-center items-center overflow-hidden border-b-2 border-ink bg-sky px-4 md:px-6 py-12 lg:py-0"
-      >
-        <div className="mx-auto w-full max-w-5xl">
-          <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-              {c.featTitle[0]} {c.featTitle[1]} <br />
-              <BrushHighlight>{c.featTitle[2]}</BrushHighlight>
-            </h2>
-          </Reveal>
-          <div className="mt-6 md:mt-8 grid gap-4 md:grid-cols-3">
-            {c.f.map(([title, sub], i) => {
-              const I = featIcons[i] ?? Map;
-              const big = i === 0 || i === 3;
-              return (
-                <Reveal key={i} delay={i * 0.1} className={big ? "md:col-span-2" : ""}>
-                  <TiltCard className={`flex h-full min-h-36 md:min-h-44 flex-col justify-between rounded-2xl md:rounded-3xl border-2 border-ink p-5 md:p-6 shadow-pop ${featTones[i]}`}>
-                    <I className="h-8 w-8 md:h-9 md:w-9" strokeWidth={1.5} />
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold">{title}</h3>
-                      <p className="mt-1 text-xs md:text-sm opacity-80">{sub}</p>
-                    </div>
-                  </TiltCard>
-                </Reveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* HOSTS */}
-      <section
-        id="hosts"
-        className="relative flex min-h-screen lg:h-screen flex-col justify-center items-center overflow-hidden border-b-2 border-ink bg-ink px-4 md:px-6 py-12 lg:py-0 text-background"
-      >
-        <div className="mx-auto grid w-full max-w-5xl items-center gap-8 md:gap-12 md:grid-cols-2">
-          <Reveal>
-            <p className="text-base md:text-lg font-semibold text-honey">{c.hostKicker}</p>
-            <h2 className="mt-2 md:mt-3 text-3xl font-bold leading-tight md:text-5xl">
-              {c.hostTitle[0]} <span className="text-honey">{c.hostTitle[1]}</span>
-            </h2>
-            <p className="mt-3 md:mt-4 max-w-sm text-sm md:text-base font-light text-background/70">{c.hostSub}</p>
-          </Reveal>
-          <div className="space-y-2.5">
-            {c.hostList.map((h, i) => (
-              <Reveal key={h} delay={i * 0.1}>
-                <motion.div
-                  whileHover={{ x: 10, rotate: i % 2 ? 1 : -1 }}
-                  className="flex items-center gap-4 rounded-xl border border-background/15 bg-background/5 px-5 py-3 md:py-3.5"
+            <div className="relative z-10 mx-auto my-auto w-full max-w-6xl px-5 py-10 sm:px-8">
+              <div className="max-w-2xl space-y-5 sm:space-y-6">
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                  className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.06] tracking-tight text-[#fffaec] [text-wrap:balance]"
                 >
-                  <span className="text-xl md:text-2xl font-bold text-honey">0{i + 1}</span>
-                  <span className="text-base md:text-lg">{h}</span>
-                </motion.div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+                  Experience Vietnam <br />
+                  through <BrushUnderline tone="honey">its people</BrushUnderline>
+                </motion.h1>
 
-      {/* WHY NOW */}
-      <section
-        id="why"
-        className="relative flex min-h-screen lg:h-screen flex-col justify-center items-center overflow-hidden border-b-2 border-ink bg-background px-4 md:px-6 py-12 lg:py-0"
-      >
-        <div className="mx-auto w-full max-w-5xl text-center">
-          <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-              {c.whyTitle[0]} <BrushUnderline><span className="text-primary">{c.whyTitle[1]}</span></BrushUnderline>
-            </h2>
-          </Reveal>
-          <div className="mt-8 md:mt-12 grid gap-6 md:grid-cols-3">
-            {c.stats.map(([n, s, label], i) => (
-              <Reveal key={i} delay={i * 0.15}>
-                <div className="text-5xl md:text-6xl font-bold text-primary">
-                  <Counter to={n as number} suffix={s as string} />
-                </div>
-                <p className="mt-2 text-xs md:text-sm text-muted-foreground">{label}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* JOIN */}
-      <section
-        id="join"
-        className="relative flex min-h-screen lg:h-screen flex-col justify-center items-center overflow-hidden bg-honey px-4 md:px-6 py-12 lg:py-0"
-      >
-        <img src={beeSrc} alt="" className="absolute -left-10 top-6 w-44 md:w-56 mix-blend-multiply animate-wiggle" />
-        <div className="relative mx-auto w-full max-w-2xl text-center">
-          <Reveal>
-            <h2 className="text-3xl font-bold leading-tight text-ink md:text-5xl">
-              {c.finalTitle[0]} <br />
-              <span className="text-primary">{c.finalTitle[1]}</span>
-            </h2>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <AnimatePresence mode="wait">
-              {joined ? (
                 <motion.p
-                  key="ok"
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="mt-8 inline-block rounded-2xl border-2 border-ink bg-card px-6 py-4 text-base md:text-lg font-semibold text-ink shadow-pop"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  className="max-w-lg text-base sm:text-xl leading-relaxed text-[#fffaec]/95"
                 >
-                  {c.thanks}
+                  Peer-to-peer cultural travel beyond the guidebooks, hosted by local cooks, artisans, and storytellers.
                 </motion.p>
-              ) : (
-                <motion.form
-                  key="form"
-                  exit={{ opacity: 0, y: -10 }}
-                  onSubmit={async (e) => {
-                    e.preventDefault();
-                    if (!email || !fullName.trim() || isSubmitting) return;
-                    setIsSubmitting(true);
-                    try {
-                      // shortcut: FormSubmit free endpoint relays directly to Gmail without a dedicated backend; requires one-time email confirmation on first run
-                      await fetch("https://formsubmit.co/ajax/viebee.contact@gmail.com", {
-                        method: "POST",
-                        headers: {
-                          "Content-Type": "application/json",
-                          Accept: "application/json",
-                        },
-                        body: JSON.stringify({
-                          name: fullName.trim(),
-                          email: email.trim(),
-                          phone: phone.trim() || "Not provided",
-                          _subject: "[VieBee Waitlist] New Early Access Registration",
-                          _captcha: "false",
-                          message: `New early access waitlist signup:\n- Full Name: ${fullName.trim()}\n- Email: ${email.trim()}\n- Phone: ${phone.trim() || "Not provided"}`,
-                        }),
-                      });
-                    } catch (err) {
-                      console.error("Waitlist submission error:", err);
-                    } finally {
-                      setIsSubmitting(false);
-                      setJoined(true);
-                    }
-                  }}
-                  className="mx-auto mt-6 md:mt-8 flex max-w-md w-full flex-col gap-2.5"
-                >
-                  <input
-                    type="text"
-                    required
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
-                    placeholder={c.fullName}
-                    className="rounded-xl border-2 border-ink bg-card px-4 py-3 text-ink outline-none transition focus:shadow-pop text-sm"
-                  />
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder={c.email}
-                    className="rounded-xl border-2 border-ink bg-card px-4 py-3 text-ink outline-none transition focus:shadow-pop text-sm"
-                  />
-                  <input
-                    type="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder={c.phone}
-                    className="rounded-xl border-2 border-ink bg-card px-4 py-3 text-ink outline-none transition focus:shadow-pop text-sm"
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="mt-1 rounded-xl border-2 border-ink bg-primary px-5 py-3.5 font-medium text-primary-foreground shadow-pop transition hover:-translate-y-1 disabled:opacity-60 cursor-pointer text-sm"
-                  >
-                    {isSubmitting ? "..." : c.join}
-                  </button>
-                </motion.form>
-              )}
-            </AnimatePresence>
-          </Reveal>
-        </div>
-      </section>
 
-      <footer className="flex flex-col items-center justify-center gap-4 bg-card py-10 text-sm text-muted-foreground sm:flex-row sm:gap-6">
-        <div className="flex items-center gap-2">
-          <img src={logoSrc} alt="" className="h-6 w-6 mix-blend-multiply" />
-          <span>© VieBee Official</span>
-        </div>
-        <span className="hidden text-ink/20 sm:inline">•</span>
-        <button
-          type="button"
-          onClick={() => {
-            navigator.clipboard.writeText("viebee.contact@gmail.com");
-            setCopiedEmail(true);
-            setTimeout(() => setCopiedEmail(false), 2000);
-          }}
-          title={copiedEmail ? "Copied!" : "Click to copy email"}
-          className="group relative inline-flex items-center gap-2 rounded-full border-2 border-ink/15 bg-background px-3.5 py-1.5 text-xs font-medium text-foreground transition hover:-translate-y-0.5 hover:border-ink hover:shadow-pop"
-        >
-          <Mail className="h-3.5 w-3.5 text-primary" />
-          <span>viebee.contact@gmail.com</span>
-          {copiedEmail ? (
-            <Check className="h-3.5 w-3.5 text-emerald-600" />
-          ) : (
-            <Copy className="h-3.5 w-3.5 text-muted-foreground transition group-hover:text-foreground" />
-          )}
-          {copiedEmail && (
-            <span className="absolute -top-8 left-1/2 -translate-x-1/2 rounded-md border border-ink bg-ink px-2 py-0.5 text-[10px] font-semibold text-background shadow-soft">
-              Copied!
-            </span>
-          )}
-        </button>
-      </footer>
-    </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex flex-wrap items-center gap-3.5 pt-2"
+                >
+                  <Link
+                    to="/upcoming"
+                    className="btn-pop bg-honey px-6 py-3.5 text-sm sm:text-base font-extrabold text-ink"
+                  >
+                    <span>Explore upcoming event</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <a
+                    href="#join"
+                    className="btn-pop bg-card px-6 py-3.5 text-sm sm:text-base font-bold text-ink"
+                  >
+                    Join waitlist
+                  </a>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Grounded hero footer bar: scroll cue left, structured citation chip right */}
+            <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+              <a
+                href="#features"
+                className="inline-flex w-fit items-center gap-2 text-sm font-bold text-[#fffaec]/90 transition-colors hover:text-honey"
+              >
+                <ArrowDown className="h-4 w-4 text-honey" />
+                <span>Explore VieBee</span>
+              </a>
+
+              <p className="inline-flex w-fit max-w-full items-center gap-2 rounded-2xl bg-[#0d111b]/75 px-3.5 py-2 text-[13px] sm:text-sm font-medium text-[#fffaec]/95">
+                <Camera className="h-4 w-4 shrink-0 text-honey" aria-hidden="true" />
+                <span>
+                  The Terrace Fields in Muong Hoa Valley, Sapa Town, Lao Cai Province. Photo: Nguyen Tan Tuan.
+                </span>
+              </p>
+            </div>
+          </section>
+
+          {/* MARQUEE */}
+          <div className="border-y-2 border-ink bg-honey py-3.5 overflow-hidden">
+            <div className="flex w-max animate-marquee items-center gap-8 whitespace-nowrap text-base sm:text-lg font-bold text-ink hover:[animation-play-state:paused]">
+              {[...MARQUEE_THEMES, ...MARQUEE_THEMES].map((item, i) => (
+                <span key={i} className="flex items-center gap-8">
+                  <span>{item}</span>
+                  <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full bg-primary" />
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* PLATFORM & LIVING CULTURE: Balanced 2x2 photo mosaic + matched-height 2x2 capability grid */}
+          <section
+            id="features"
+            className="bg-background py-16 sm:py-20 lg:py-24"
+          >
+            <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+              <div className="grid gap-4 lg:grid-cols-12 lg:items-end">
+                <Rise className="lg:col-span-6">
+                  <h2 className="text-3xl sm:text-5xl font-extrabold leading-[1.08] tracking-tight text-ink [text-wrap:balance]">
+                    Built for curious travelers
+                  </h2>
+                </Rise>
+                <Rise delay={0.05} className="lg:col-span-6">
+                  <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
+                    Skip crowded tour buses. Connect directly with verified locals across Vietnam in small-group gatherings.
+                  </p>
+                </Rise>
+              </div>
+
+              <div className="mt-8 sm:mt-10 grid gap-5 lg:grid-cols-12 lg:items-stretch">
+                {/* Left 6 cols: Equal-height 2x2 vibrant photo mosaic */}
+                <Rise className="lg:col-span-6">
+                  <div className="grid h-full grid-cols-2 grid-rows-2 gap-3.5">
+                    {CULTURE_MOSAIC.map((photo) => (
+                      <div
+                        key={photo.src}
+                        className="group relative aspect-[4/3] overflow-hidden rounded-2xl border-2 border-ink bg-card"
+                      >
+                        <img
+                          src={photo.src}
+                          alt={photo.alt}
+                          width={photo.w}
+                          height={photo.h}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <span className="absolute bottom-2.5 left-2.5 rounded-xl border-2 border-ink bg-card px-3 py-1 text-[13px] font-extrabold text-ink">
+                          {photo.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </Rise>
+
+                {/* Right 6 cols: Equal-row 2x2 capability grid matching left photo grid height */}
+                <div className="grid grid-rows-2 gap-3.5 sm:grid-cols-2 lg:col-span-6">
+                  {FEATURES.map((feat, i) => {
+                    const Icon = feat.icon;
+                    return (
+                      <Rise key={feat.title} delay={i * 0.05} className="h-full">
+                        <div
+                          className={`card-pop flex h-full flex-col justify-between gap-4 rounded-2xl border-2 border-ink p-5 sm:p-6 ${feat.tone}`}
+                        >
+                          <div className="flex items-start justify-between gap-3">
+                            <h3 className="text-xl font-extrabold leading-snug">{feat.title}</h3>
+                            <span
+                              aria-hidden="true"
+                              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border-2 border-ink ${feat.badge}`}
+                            >
+                              <Icon className="h-5 w-5" />
+                            </span>
+                          </div>
+                          <p className="text-sm sm:text-base leading-relaxed opacity-90">{feat.body}</p>
+                        </div>
+                      </Rise>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* WHY VIETNAM NOW: Sky Blue section with flush-aligned photo & 3 equal stat rows */}
+          <section
+            id="why"
+            className="border-y-2 border-ink bg-sky py-16 sm:py-20 lg:py-24"
+          >
+            <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+              <div className="grid gap-4 lg:grid-cols-12 lg:items-end">
+                <Rise className="lg:col-span-6">
+                  <h2 className="text-3xl sm:text-5xl font-extrabold leading-[1.08] tracking-tight text-ink [text-wrap:balance]">
+                    Vietnam is buzzing
+                  </h2>
+                </Rise>
+                <Rise delay={0.05} className="lg:col-span-6">
+                  <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
+                    Millions of visitors arrive each year looking past generic itineraries for real local hospitality, everyday streets, and living heritage.
+                  </p>
+                </Rise>
+              </div>
+
+              <div className="mt-8 sm:mt-10 grid gap-5 lg:grid-cols-12 lg:items-stretch">
+                <Rise className="lg:col-span-7">
+                  <div className="group relative h-full overflow-hidden rounded-2xl border-2 border-ink bg-card">
+                    <img
+                      src="/sample/vb-sample-6.jpg"
+                      alt="A local cycling in morning sunlight past an old brick village gate in Vietnam"
+                      width={1623}
+                      height={1080}
+                      loading="lazy"
+                      className="aspect-[16/10] lg:aspect-auto lg:h-[360px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </Rise>
+
+                <div className="grid grid-rows-3 gap-3.5 lg:col-span-5">
+                  {STATS.map((stat, i) => (
+                    <Rise key={stat.label} delay={i * 0.06} className="h-full">
+                      <div className="flex h-full items-center justify-between gap-4 rounded-2xl border-2 border-ink bg-card px-6 py-4">
+                        <span className="text-3xl sm:text-4xl font-extrabold tracking-tight tabular-nums text-primary">
+                          {stat.value}
+                        </span>
+                        <span className="text-right text-sm sm:text-base font-medium text-muted-foreground">
+                          {stat.label}
+                        </span>
+                      </div>
+                    </Rise>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* JOIN WAITLIST: Honey split with matched bee badge & CTA */}
+          <section
+            id="join"
+            className="bg-honey py-16 sm:py-20 lg:py-24"
+          >
+            <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+              <div className="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-12">
+                <div className="space-y-6 lg:col-span-6">
+                  <Rise>
+                    <h2 className="text-3xl sm:text-5xl font-extrabold leading-[1.08] tracking-tight text-ink [text-wrap:balance]">
+                      Be the first to fly with us
+                    </h2>
+                    <p className="mt-3 max-w-md text-base sm:text-lg leading-relaxed text-ink/90">
+                      Leave your details for early traveler invitations, local host onboarding, and upcoming gatherings.
+                    </p>
+                  </Rise>
+
+                  <Rise delay={0.06}>
+                    <div className="flex flex-wrap items-center gap-3.5">
+                      {/* Crisp white badge frame matches the CTA height and keeps the yellow bee high-contrast */}
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border-2 border-ink bg-card p-1.5">
+                        <img
+                          src="/viebee-bee.png"
+                          alt="VieBee mascot"
+                          width={48}
+                          height={48}
+                          loading="lazy"
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
+                      <Link
+                        to="/upcoming"
+                        className="btn-pop h-14 bg-card px-6 text-sm sm:text-base font-bold text-ink"
+                      >
+                        <span>Explore upcoming event</span>
+                        <ArrowRight className="h-4 w-4 text-primary" />
+                      </Link>
+                    </div>
+                  </Rise>
+                </div>
+
+                <Rise delay={0.1} className="lg:col-span-6">
+                  <div className="rounded-3xl border-2 border-ink bg-card p-6 sm:p-8">
+                    <AnimatePresence mode="wait">
+                      {joined ? (
+                        <motion.div
+                          key="ok"
+                          initial={{ opacity: 0, scale: 0.96 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          className="space-y-3 py-6 text-center"
+                        >
+                          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl border-2 border-ink bg-honey text-ink">
+                            <Check className="h-6 w-6 text-primary" />
+                          </div>
+                          <h3 className="text-xl font-extrabold text-ink">You are on the list</h3>
+                          <p className="mx-auto max-w-sm text-base text-muted-foreground">
+                            We will reach out as soon as new seats and host spots open.
+                          </p>
+                        </motion.div>
+                      ) : (
+                        <form
+                          key="form"
+                          onSubmit={async (e) => {
+                            e.preventDefault();
+                            if (!email.trim() || !fullName.trim() || isSubmitting) return;
+                            setIsSubmitting(true);
+                            try {
+                              // shortcut: FormSubmit free endpoint relays directly to Gmail without a dedicated backend; requires one-time email confirmation on first run
+                              await fetch("https://formsubmit.co/ajax/viebee.contact@gmail.com", {
+                                method: "POST",
+                                headers: {
+                                  "Content-Type": "application/json",
+                                  Accept: "application/json",
+                                },
+                                body: JSON.stringify({
+                                  name: fullName.trim(),
+                                  email: email.trim(),
+                                  phone: phone.trim() || "Not provided",
+                                  _subject: "[VieBee Waitlist] New Early Access Registration",
+                                  _captcha: "false",
+                                  message: `New early access waitlist signup:\n- Full Name: ${fullName.trim()}\n- Email: ${email.trim()}\n- Phone: ${phone.trim() || "Not provided"}`,
+                                }),
+                              });
+                            } catch (err) {
+                              console.error("Waitlist submission error:", err);
+                            } finally {
+                              setIsSubmitting(false);
+                              setJoined(true);
+                            }
+                          }}
+                          className="space-y-4"
+                        >
+                          <div>
+                            <label htmlFor="waitlist-name" className="block text-sm font-bold text-ink">
+                              Full name
+                            </label>
+                            <input
+                              id="waitlist-name"
+                              type="text"
+                              required
+                              autoComplete="name"
+                              value={fullName}
+                              onChange={(e) => setFullName(e.target.value)}
+                              placeholder="Your full name"
+                              className="mt-1.5 w-full rounded-xl border-2 border-ink bg-background px-4 py-3 text-sm text-ink outline-none focus:ring-2 focus:ring-primary"
+                            />
+                          </div>
+
+                          <div>
+                            <label htmlFor="waitlist-email" className="block text-sm font-bold text-ink">
+                              Email address
+                            </label>
+                            <input
+                              id="waitlist-email"
+                              type="email"
+                              required
+                              inputMode="email"
+                              autoComplete="email"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                              placeholder="your@email.com"
+                              className="mt-1.5 w-full rounded-xl border-2 border-ink bg-background px-4 py-3 text-sm text-ink outline-none focus:ring-2 focus:ring-primary"
+                            />
+                          </div>
+
+                          <div>
+                            <label htmlFor="waitlist-phone" className="block text-sm font-bold text-ink">
+                              Phone number (optional)
+                            </label>
+                            <input
+                              id="waitlist-phone"
+                              type="tel"
+                              inputMode="tel"
+                              autoComplete="tel"
+                              value={phone}
+                              onChange={(e) => setPhone(e.target.value)}
+                              placeholder="Vietnamese phone or WhatsApp"
+                              className="mt-1.5 w-full rounded-xl border-2 border-ink bg-background px-4 py-3 text-sm text-ink outline-none focus:ring-2 focus:ring-primary"
+                            />
+                          </div>
+
+                          <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="btn-pop w-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground disabled:opacity-60"
+                          >
+                            {isSubmitting ? "Sending..." : "Join waitlist"}
+                          </button>
+                        </form>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </Rise>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <SiteFooter />
+      </div>
+    </MotionConfig>
   );
 }

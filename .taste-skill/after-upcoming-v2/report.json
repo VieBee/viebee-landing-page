@@ -1,0 +1,1427 @@
+{
+ "url": "http://127.0.0.1:4175/upcoming",
+ "at": "2026-11-16T18:03:10.069Z",
+ "allow": [
+  "palette-cream"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.51,
+    0.88
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 10,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1655,
+     "screens": 1.8,
+     "words": 205,
+     "img": 6,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "vb-sample-6.jpg",
+      "vb-sample-3.jpg",
+      "vb-sample-1.jpg",
+      "vb-sample-5.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "The Saigon commute",
+     "words": 3,
+     "chars": 18,
+     "lines": 1,
+     "size": 72,
+     "vw": 5,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.53,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Saigon commute",
+     "words": 3,
+     "lines": 1,
+     "size": 72,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "The Saigon commute",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 72,
+      "vw": 5,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "District 1 coffee walk",
+      "words": 4,
+      "chars": 22,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 452,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Scenes around Vietnam",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 1038,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      36,
+      72
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.6
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "SN Pro",
+      "text": "The Saigon commute"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#dbe8ff",
+       "top": 953,
+       "hsl": {
+        "h": 218,
+        "s": 1,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0d111b",
+       "share": 0.49
+      },
+      {
+       "color": "#3d4047",
+       "share": 0.44
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.04
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.03
+      },
+      {
+       "color": "#1530c7",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#1530c7",
+      "hsl": {
+       "h": 231,
+       "s": 0.81,
+       "l": 0.43
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 3,
+     "radius": 18,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Walking",
+      "Confirm reservation"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 18,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 18,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": true,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 1655,
+    "margins": {
+     "left": 176,
+     "right": 176
+    },
+    "sections": [
+     {
+      "sel": "main",
+      "tag": "main",
+      "top": 72,
+      "height": 1363,
+      "words": 163,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "The Saigon commute",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 176,
+      "right": 176,
+      "textLeft": 176,
+      "textRight": 176,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 1435,
+      "height": 220,
+      "words": 33,
+      "media": 0,
+      "middle": 69,
+      "heading": {
+       "text": "Vie",
+       "size": 24,
+       "tag": "span"
+      },
+      "left": 176,
+      "right": 176,
+      "textLeft": 176,
+      "textRight": 216,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "The Saigon commute",
+      "size": 72,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 176,
+      "n": 3
+     },
+     {
+      "x": 210,
+      "n": 3
+     },
+     {
+      "x": 863,
+      "n": 2
+     },
+     {
+      "x": 816,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.08,
+    "voidBox": {
+     "x": 0,
+     "y": 300,
+     "w": 180,
+     "h": 600
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.56,
+    0.89,
+    1
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 10,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 2821,
+     "screens": 2.8,
+     "words": 205,
+     "img": 6,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "vb-sample-6.jpg",
+      "vb-sample-3.jpg",
+      "vb-sample-1.jpg",
+      "vb-sample-5.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "The Saigon commute",
+     "words": 3,
+     "chars": 18,
+     "lines": 2,
+     "size": 72,
+     "vw": 9.4,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.75,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Saigon commute",
+     "words": 3,
+     "lines": 2,
+     "size": 72,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "The Saigon commute",
+      "words": 3,
+      "chars": 18,
+      "lines": 2,
+      "size": 72,
+      "vw": 9.4,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.75,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "District 1 coffee walk",
+      "words": 4,
+      "chars": 22,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 527,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Scenes around Vietnam",
+      "words": 3,
+      "chars": 21,
+      "lines": 3,
+      "size": 36,
+      "vw": 4.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 1624,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      18,
+      20,
+      24,
+      36,
+      72
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.6
+     },
+     "measureChars": 80,
+     "max": {
+      "size": 72,
+      "vw": 9.4,
+      "font": "SN Pro",
+      "text": "The Saigon commute"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 395,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#ffefb1",
+       "top": 996,
+       "hsl": {
+        "h": 48,
+        "s": 1,
+        "l": 0.85
+       }
+      },
+      {
+       "color": "#dbe8ff",
+       "top": 1542,
+       "hsl": {
+        "h": 218,
+        "s": 1,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#f3efe6",
+       "top": 2493,
+       "hsl": {
+        "h": 42,
+        "s": 0.35,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0d111b",
+       "share": 0.49
+      },
+      {
+       "color": "#3d4047",
+       "share": 0.44
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.04
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.03
+      },
+      {
+       "color": "#1530c7",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#1530c7",
+      "hsl": {
+       "h": 231,
+       "s": 0.81,
+       "l": 0.43
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 18,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Walking"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 18,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 18,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": true,
+     "height": 72,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 2821,
+    "margins": {
+     "left": 32,
+     "right": 34
+    },
+    "sections": [
+     {
+      "sel": "section.mx-auto.max-w-6xl",
+      "tag": "section",
+      "top": 72,
+      "height": 1470,
+      "words": 137,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "The Saigon commute",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.border-t-2.border-ink",
+      "tag": "section",
+      "top": 1542,
+      "height": 951,
+      "words": 26,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Scenes around Vietnam",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 2493,
+      "height": 328,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Vie",
+       "size": 24,
+       "tag": "span"
+      },
+      "left": 32,
+      "right": 326,
+      "textLeft": 32,
+      "textRight": 326,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "The Saigon commute",
+      "size": 72,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 66,
+      "n": 5
+     },
+     {
+      "x": 32,
+      "n": 3
+     },
+     {
+      "x": 288,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.72,
+    0.79,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 10,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2713,
+     "screens": 3.2,
+     "words": 200,
+     "img": 6,
+     "video": 0,
+     "canvas": 0,
+     "svg": 10,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "vb-sample-6.jpg",
+      "vb-sample-3.jpg",
+      "vb-sample-1.jpg",
+      "vb-sample-5.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "The Saigon commute",
+     "words": 3,
+     "chars": 18,
+     "lines": 1,
+     "size": 36,
+     "vw": 9.2,
+     "font": "SN Pro",
+     "weight": 800,
+     "tracking": -0.025,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 104,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Saigon commute",
+     "words": 3,
+     "lines": 1,
+     "size": 36,
+     "font": "SN Pro"
+    },
+    "headings": [
+     {
+      "text": "The Saigon commute",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 104,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "District 1 coffee walk",
+      "words": 4,
+      "chars": 22,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 469,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Reserve a seat",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.33,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 1201,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Scenes around Vietnam",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "SN Pro",
+      "weight": 800,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1779,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "SN Pro",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      16,
+      20,
+      24,
+      30,
+      36
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "SN Pro",
+      "size": 16,
+      "leading": 1.63,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10
+     },
+     "measureChars": 37,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "SN Pro",
+      "text": "The Saigon commute"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fffaec",
+     "bodyBgHsl": {
+      "h": 44,
+      "s": 1,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffaec",
+       "top": 0,
+       "hsl": {
+        "h": 44,
+        "s": 1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 307,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#fad957",
+       "top": 443,
+       "hsl": {
+        "h": 48,
+        "s": 0.94,
+        "l": 0.66
+       }
+      },
+      {
+       "color": "#ffefb1",
+       "top": 1175,
+       "hsl": {
+        "h": 48,
+        "s": 1,
+        "l": 0.85
+       }
+      },
+      {
+       "color": "#dbe8ff",
+       "top": 1713,
+       "hsl": {
+        "h": 218,
+        "s": 1,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#f3efe6",
+       "top": 2377,
+       "hsl": {
+        "h": 42,
+        "s": 0.35,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0d111b",
+       "share": 0.5
+      },
+      {
+       "color": "#3d4047",
+       "share": 0.42
+      },
+      {
+       "color": "#0d101b",
+       "share": 0.04
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.03
+      },
+      {
+       "color": "#1530c7",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#1530c7",
+      "hsl": {
+       "h": 231,
+       "s": 0.81,
+       "l": 0.43
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 18,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Join waitlist",
+      "Walking"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 11,
+     "boxRadius": 18,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "sn pro"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 2713,
+    "margins": {
+     "left": 20,
+     "right": 22
+    },
+    "sections": [
+     {
+      "sel": "div.flex.flex-col",
+      "tag": "div",
+      "top": 104,
+      "height": 163,
+      "words": 23,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 50,
+      "textLeft": 20,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.mt-10.grid",
+      "tag": "div",
+      "top": 307,
+      "height": 1366,
+      "words": 111,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "District 1 coffee walk",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 46,
+      "right": 46,
+      "textLeft": 46,
+      "textRight": 49,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.border-t-2.border-ink",
+      "tag": "section",
+      "top": 1713,
+      "height": 664,
+      "words": 26,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Scenes around Vietnam",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 22,
+      "textLeft": 20,
+      "textRight": 47,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-[#f3efe6].text-ink",
+      "tag": "footer",
+      "top": 2377,
+      "height": 336,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 36,
+      "textLeft": 20,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "The Saigon commute",
+      "size": 36,
+      "top": 104,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 46,
+      "n": 5
+     },
+     {
+      "x": 20,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 10 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "1 headline(s) wrap past two lines at 768px: \"Scenes around Vietnam\" → 3 lines (3 words, 36px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 390,
+   "message": "The h1 is a bare name (\"The Saigon commute\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v2/desktop-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v2/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v2/tablet-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v2/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v2/mobile-fold.jpg",
+   "pages": [
+    "/Users/chou/Coding/Source/competition/ueh-uii-sandbox/source/viebee-landing-page/.taste-skill/after-upcoming-v2/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
