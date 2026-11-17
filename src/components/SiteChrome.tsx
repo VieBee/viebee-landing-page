@@ -25,9 +25,16 @@ export function BrandLockup({ light = false }: { light?: boolean }) {
   );
 }
 
-export function SiteHeader({ transparentAtTop = false }: { transparentAtTop?: boolean }) {
+export function SiteHeader({
+  transparentAtTop = false,
+  wide = false,
+}: {
+  transparentAtTop?: boolean;
+  wide?: boolean;
+}) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isUpcoming = pathname === "/upcoming";
+  const isAbout = pathname === "/about";
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -50,10 +57,33 @@ export function SiteHeader({ transparentAtTop = false }: { transparentAtTop?: bo
         isTransparent ? "bg-transparent" : "bg-background"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-5 sm:h-18 sm:px-8">
+      <div
+        className={`mx-auto flex h-16 items-center justify-between gap-2 px-4 sm:h-18 sm:px-8 ${
+          wide ? "max-w-7xl" : "max-w-6xl"
+        }`}
+      >
         <BrandLockup light={isTransparent} />
 
-        <nav className="flex items-center gap-2.5 sm:gap-6" aria-label="Main">
+        <nav className="flex items-center gap-3 sm:gap-6" aria-label="Main">
+          <Link
+            to="/about"
+            className={`group relative whitespace-nowrap py-1.5 text-[13px] sm:text-sm transition-colors ${
+              isTransparent
+                ? "font-bold text-[#fffaec]/95 hover:text-honey"
+                : isAbout
+                  ? "font-extrabold text-ink"
+                  : "font-semibold text-muted-foreground hover:text-ink"
+            }`}
+          >
+            <span className="sm:hidden">About</span>
+            <span className="hidden sm:inline">About us</span>
+            <span
+              className={`absolute inset-x-0 bottom-0 h-0.5 rounded-full transition-transform duration-300 origin-left ${
+                isTransparent ? "bg-honey" : "bg-primary"
+              } ${isAbout ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+            />
+          </Link>
+
           <Link
             to="/upcoming"
             className={`group relative whitespace-nowrap py-1.5 text-[13px] sm:text-sm transition-colors ${
@@ -64,7 +94,8 @@ export function SiteHeader({ transparentAtTop = false }: { transparentAtTop?: bo
                   : "font-semibold text-muted-foreground hover:text-ink"
             }`}
           >
-            <span>Upcoming event</span>
+            <span className="sm:hidden">Events</span>
+            <span className="hidden sm:inline">Upcoming event</span>
             <span
               className={`absolute inset-x-0 bottom-0 h-0.5 rounded-full transition-transform duration-300 origin-left ${
                 isTransparent ? "bg-honey" : "bg-primary"
@@ -101,7 +132,8 @@ export function SiteHeader({ transparentAtTop = false }: { transparentAtTop?: bo
                 : "bg-primary text-primary-foreground"
             }`}
           >
-            Join waitlist
+            <span className="sm:hidden">Waitlist</span>
+            <span className="hidden sm:inline">Join waitlist</span>
           </a>
         </nav>
       </div>

@@ -22,4 +22,12 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).toBe("/upcoming");
   });
+
+  it("matches a page for /about instead of falling back to not found", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/about");
+
+    expect(matches.at(-1)?.routeId).toBe("/about");
+  });
 });
